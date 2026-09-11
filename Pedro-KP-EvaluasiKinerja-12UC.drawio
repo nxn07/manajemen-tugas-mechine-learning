@@ -1,52 +1,52 @@
 <mxfile host="app.diagrams.net" compressed="false" pages="39">
   <diagram id="uc-main" name="1. Use Case Diagram (12 UC)">
-    <mxGraphModel dx="1810" dy="2190" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1650" pageHeight="1150" math="0" shadow="0">
+    <mxGraphModel dx="2413" dy="2537" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1650" pageHeight="1150" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="uc_t1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#0F172A;" value="USE CASE DIAGRAM — SISTEM INFORMASI KINERJA PEGAWAI (SIM-KAP)" vertex="1">
+        <mxCell id="uc_t1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#0F172A;" value="USE CASE DIAGRAM — SISTEM INFORMASI KINERJA PEGAWAI (SIM-KAP)" vertex="1">
           <mxGeometry height="40" width="850" x="370" y="-70" as="geometry" />
         </mxCell>
-        <mxCell id="uc_t2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#64748B;" value="Project Kerja Praktik (KP) Pedrof Da Kristof — 12 Use Cases &amp;amp; 3 Aktor Utama" vertex="1">
+        <mxCell id="uc_t2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontColor=#64748B;" value="Project Kerja Praktik (KP) Pedrof Da Kristof — 12 Use Cases &amp;amp; 3 Aktor Utama" vertex="1">
           <mxGeometry height="20" width="850" x="370" y="-35" as="geometry" />
         </mxCell>
         <mxCell id="uc_box" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#475569;fontColor=#1E293B;fontSize=16;startSize=40;rounded=1;" value="&lt;b&gt;Sistem Informasi Evaluasi Kinerja Pegawai (SIM-KAP)&lt;/b&gt;" vertex="1">
           <mxGeometry height="1080" width="1060" x="260" y="50" as="geometry" />
         </mxCell>
-        <mxCell id="uc01" parent="uc_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#3B82F6;fontColor=#0F172A;fontSize=13.5;fontStyle=1;" value="UC-01: Login &amp; Autentikasi Pengguna" vertex="1">
+        <mxCell id="uc01" parent="uc_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#3B82F6;fontColor=#0F172A;fontSize=16;fontStyle=1;" value="UC-01: Login &amp;amp; Autentikasi Pengguna" vertex="1">
           <mxGeometry height="65" width="400" x="50" y="95" as="geometry" />
         </mxCell>
-        <mxCell id="uc07" parent="uc_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F0FDF4;strokeColor=#16A34A;fontColor=#0F172A;fontSize=13.5;fontStyle=1;" value="UC-07: Monitoring Daftar &amp; Progres Tugas" vertex="1">
+        <mxCell id="uc07" parent="uc_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F0FDF4;strokeColor=#16A34A;fontColor=#0F172A;fontSize=16;fontStyle=1;" value="UC-07: Monitoring Daftar &amp;amp; Progres Tugas" vertex="1">
           <mxGeometry height="65" width="400" x="50" y="310" as="geometry" />
         </mxCell>
-        <mxCell id="uc08" parent="uc_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F0FDF4;strokeColor=#16A34A;fontColor=#0F172A;fontSize=13.5;fontStyle=1;" value="UC-08: Pengumpulan Bukti Pengerjaan Tugas" vertex="1">
+        <mxCell id="uc08" parent="uc_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F0FDF4;strokeColor=#16A34A;fontColor=#0F172A;fontSize=16;fontStyle=1;" value="UC-08: Pengumpulan Bukti Pengerjaan Tugas" vertex="1">
           <mxGeometry height="65" width="400" x="50" y="450" as="geometry" />
         </mxCell>
-        <mxCell id="uc12" parent="uc_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FDF2F8;strokeColor=#DB2777;fontColor=#0F172A;fontSize=13.5;fontStyle=1;" value="UC-12: Monitoring Scorecard &amp; Cetak Laporan" vertex="1">
+        <mxCell id="uc12" parent="uc_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FDF2F8;strokeColor=#DB2777;fontColor=#0F172A;fontSize=16;fontStyle=1;" value="UC-12: Monitoring Scorecard &amp;amp; Cetak Laporan" vertex="1">
           <mxGeometry height="65" width="400" x="50" y="780" as="geometry" />
         </mxCell>
-        <mxCell id="uc02" parent="uc_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#3B82F6;fontColor=#0F172A;fontSize=13.5;fontStyle=1;" value="UC-02: Logout / Keluar Sesi Akun" vertex="1">
+        <mxCell id="uc02" parent="uc_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#3B82F6;fontColor=#0F172A;fontSize=16;fontStyle=1;" value="UC-02: Logout / Keluar Sesi Akun" vertex="1">
           <mxGeometry height="65" width="400" x="600" y="70" as="geometry" />
         </mxCell>
-        <mxCell id="uc03" parent="uc_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;fontColor=#0F172A;fontSize=13.5;fontStyle=1;" value="UC-03: Kelola Akun Pengguna &amp; Role Spatie" vertex="1">
+        <mxCell id="uc03" parent="uc_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;fontColor=#0F172A;fontSize=16;fontStyle=1;" value="UC-03: Kelola Akun Pengguna &amp;amp; Role Spatie" vertex="1">
           <mxGeometry height="65" width="400" x="600" y="170" as="geometry" />
         </mxCell>
-        <mxCell id="uc04" parent="uc_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;fontColor=#0F172A;fontSize=13.5;fontStyle=1;" value="UC-04: Kelola Data Master Divisi" vertex="1">
+        <mxCell id="uc04" parent="uc_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;fontColor=#0F172A;fontSize=16;fontStyle=1;" value="UC-04: Kelola Data Master Divisi" vertex="1">
           <mxGeometry height="65" width="400" x="600" y="240" as="geometry" />
         </mxCell>
-        <mxCell id="uc05" parent="uc_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;fontColor=#0F172A;fontSize=13.5;fontStyle=1;" value="UC-05: Kelola Kriteria &amp; Bobot KPI" vertex="1">
+        <mxCell id="uc05" parent="uc_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;fontColor=#0F172A;fontSize=16;fontStyle=1;" value="UC-05: Kelola Kriteria &amp;amp; Bobot KPI" vertex="1">
           <mxGeometry height="65" width="400" x="600" y="350" as="geometry" />
         </mxCell>
-        <mxCell id="uc06" parent="uc_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;fontColor=#0F172A;fontSize=13.5;fontStyle=1;" value="UC-06: Distribusi / Pembuatan Tugas Baru" vertex="1">
+        <mxCell id="uc06" parent="uc_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;fontColor=#0F172A;fontSize=16;fontStyle=1;" value="UC-06: Distribusi / Pembuatan Tugas Baru" vertex="1">
           <mxGeometry height="65" width="400" x="600" y="430" as="geometry" />
         </mxCell>
-        <mxCell id="uc09" parent="uc_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;fontColor=#0F172A;fontSize=13.5;fontStyle=1;" value="UC-09: Review &amp; Verifikasi Hasil Tugas" vertex="1">
+        <mxCell id="uc09" parent="uc_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;fontColor=#0F172A;fontSize=16;fontStyle=1;" value="UC-09: Review &amp;amp; Verifikasi Hasil Tugas" vertex="1">
           <mxGeometry height="65" width="400" x="600" y="540" as="geometry" />
         </mxCell>
-        <mxCell id="uc10" parent="uc_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FDF2F8;strokeColor=#DB2777;fontColor=#0F172A;fontSize=13.5;fontStyle=1;" value="UC-10: Input Penilaian Kriteria KPI Pegawai" vertex="1">
+        <mxCell id="uc10" parent="uc_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FDF2F8;strokeColor=#DB2777;fontColor=#0F172A;fontSize=16;fontStyle=1;" value="UC-10: Input Penilaian Kriteria KPI Pegawai" vertex="1">
           <mxGeometry height="65" width="400" x="600" y="680" as="geometry" />
         </mxCell>
-        <mxCell id="uc11" parent="uc_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FDF2F8;strokeColor=#DB2777;fontColor=#0F172A;fontSize=13.5;fontStyle=1;" value="UC-11: Kalkulasi Skor &amp; Grade Evaluasi" vertex="1">
+        <mxCell id="uc11" parent="uc_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FDF2F8;strokeColor=#DB2777;fontColor=#0F172A;fontSize=16;fontStyle=1;" value="UC-11: Kalkulasi Skor &amp;amp; Grade Evaluasi" vertex="1">
           <mxGeometry height="65" width="400" x="600" y="780" as="geometry" />
         </mxCell>
         <mxCell id="rel_inc_1" edge="1" parent="uc_box" source="uc09" style="edgeStyle=straight;html=1;dashed=1;endArrow=open;strokeColor=#475569;strokeWidth=1.5;fontSize=12;fontColor=#334155;fontStyle=1;" target="uc08" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;">
@@ -58,13 +58,13 @@
         <mxCell id="rel_inc_3" edge="1" parent="uc_box" source="uc12" style="edgeStyle=straight;html=1;dashed=1;endArrow=open;strokeColor=#475569;strokeWidth=1.5;fontSize=12;fontColor=#334155;fontStyle=1;" target="uc11" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="act_emp" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#DCFCE7;strokeColor=#16A34A;fontSize=11;fontColor=#14532D;" value="🧑‍💻&#10;&lt;b&gt;Pegawai (Employee)&lt;/b&gt;&#10;Staf Pelaksana Tugas" vertex="1">
+        <mxCell id="act_emp" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#DCFCE7;strokeColor=#16A34A;fontSize=20;fontColor=#14532D;" value="🧑‍💻&#10;&lt;b&gt;Pegawai (Employee)&lt;/b&gt;&#10;Staf Pelaksana Tugas" vertex="1">
           <mxGeometry height="95" width="50" x="170" y="380" as="geometry" />
         </mxCell>
-        <mxCell id="act_mgr" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#DBEAFE;strokeColor=#2563EB;fontSize=11;fontColor=#1E3A8A;" value="👔&#10;&lt;b&gt;Manager (Kadiv)&lt;/b&gt;&#10;Kepala Divisi / Evaluator" vertex="1">
+        <mxCell id="act_mgr" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#DBEAFE;strokeColor=#2563EB;fontSize=20;fontColor=#1E3A8A;" value="👔&#10;&lt;b&gt;Manager (Kadiv)&lt;/b&gt;&#10;Kepala Divisi / Evaluator" vertex="1">
           <mxGeometry height="95" width="50" x="1590" y="270" as="geometry" />
         </mxCell>
-        <mxCell id="act_adm" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#FEF3C7;strokeColor=#D97706;fontSize=11;fontColor=#78350F;" value="👑&#10;&lt;b&gt;Administrator&lt;/b&gt;&#10;Pengelola Master &amp;amp; RBAC" vertex="1">
+        <mxCell id="act_adm" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#FEF3C7;strokeColor=#D97706;fontSize=20;fontColor=#78350F;" value="👑&#10;&lt;b&gt;Administrator&lt;/b&gt;&#10;Pengelola Master &amp;amp; RBAC" vertex="1">
           <mxGeometry height="95" width="50" x="1620" y="720" as="geometry" />
         </mxCell>
         <mxCell id="e_emp_uc01" edge="1" parent="1" source="act_emp" style="edgeStyle=straight;html=1;endArrow=none;strokeColor=#16A34A;strokeWidth=2;exitX=1;exitY=0.2;entryX=0;entryY=0.5;" target="uc01">
@@ -2294,130 +2294,96 @@
     </mxGraphModel>
   </diagram>
   <diagram id="class-diagram" name="26. Class Diagram (Diagram Kelas)">
-    <mxGraphModel dx="1810" dy="1040" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1900" pageHeight="1500" math="0" shadow="0">
+    <mxGraphModel dx="2413" dy="1387" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1950" pageHeight="1850" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="cls_t1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#0F172A;" value="CLASS DIAGRAM — SISTEM INFORMASI EVALUASI KINERJA PEGAWAI (SIM-KAP)" vertex="1">
-          <mxGeometry height="40" width="1000" x="450" y="25" as="geometry" />
+        <mxCell id="cls_t1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=28;fontStyle=1;fontColor=#0F172A;" value="CLASS DIAGRAM — SISTEM INFORMASI EVALUASI KINERJA PEGAWAI (SIM-KAP)" vertex="1">
+          <mxGeometry height="45" width="1250" x="350" y="30" as="geometry" />
         </mxCell>
-        <mxCell id="cls_t2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#64748B;" value="Diagram Kelas Entitas Model Domain, Atribut, Tipe Data, Metode Relasi Eloquent, dan Multiplisitas" vertex="1">
-          <mxGeometry height="20" width="1000" x="450" y="65" as="geometry" />
+        <mxCell id="cls_t2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#475569;" value="Diagram Kelas Entitas Model Domain, Atribut, Tipe Data, Metode Relasi Eloquent, dan Multiplisitas" vertex="1">
+          <mxGeometry height="25" width="1250" x="350" y="78" as="geometry" />
         </mxCell>
-        
-        <mxCell id="cls_user" parent="1" style="rounded=1;whiteSpace=wrap;html=1;overflow=hidden;fillColor=#FFFFFF;strokeColor=#2563EB;strokeWidth=1.5;verticalAlign=top;align=left;spacing=0;" value="&lt;div style=&quot;background-color:#2563EB;color:#ffffff;padding:8px 12px;font-size:14px;text-align:center;font-weight:bold;border-top-left-radius:6px;border-top-right-radius:6px;&quot;&gt;User&lt;br/&gt;&lt;span style=&quot;font-size:11.5px;font-weight:normal;opacity:0.9;&quot;&gt;&amp;laquo;Model / Entity&amp;raquo;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;padding:10px 14px;font-size:12.5px;color:#0F172A;line-height:1.55;font-family:Consolas, 'Courier New', monospace;&quot;&gt;&lt;b style=&quot;color:#1E40AF;font-family:sans-serif;&quot;&gt;Attributes:&lt;/b&gt;&lt;br/&gt;+ id : bigint [PK]&lt;br/&gt;+ name : varchar(255)&lt;br/&gt;+ email : varchar(255)&lt;br/&gt;+ password : varchar(255)&lt;br/&gt;+ remember_token : varchar(100)&lt;br/&gt;+ created_at : timestamp&lt;br/&gt;+ updated_at : timestamp&lt;hr style=&quot;border:none;border-top:1px solid #BFDBFE;margin:8px 0;&quot;/&gt;&lt;b style=&quot;color:#1E40AF;font-family:sans-serif;&quot;&gt;Methods &amp;amp; Relations:&lt;/b&gt;&lt;br/&gt;+ employee() : HasOne&lt;br/&gt;+ roles() : BelongsToMany&lt;br/&gt;+ permissions() : BelongsToMany&lt;br/&gt;+ hasRole(role: string) : bool&lt;br/&gt;+ can(permission: string) : bool&lt;/div&gt;" vertex="1">
-          <mxGeometry height="345" width="324" x="60" y="130" as="geometry" />
+        <mxCell id="cls_user" parent="1" style="rounded=1;whiteSpace=wrap;html=1;overflow=hidden;fillColor=#FFFFFF;strokeColor=#2563EB;strokeWidth=2;verticalAlign=top;align=left;spacing=0;" value="&lt;div style=&quot;background-color:#2563EB;color:#ffffff;padding:12px 16px;font-size:18px;text-align:center;font-weight:bold;border-top-left-radius:8px;border-top-right-radius:8px;&quot;&gt;User&lt;br/&gt;&lt;span style=&quot;font-size:13px;font-weight:normal;opacity:0.95;&quot;&gt;&amp;laquo;Model / Entity&amp;raquo;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;padding:14px 18px;font-size:15px;color:#0F172A;line-height:1.65;font-family:Consolas, 'Courier New', monospace;&quot;&gt;&lt;b style=&quot;color:#1E40AF;font-family:sans-serif;font-size:15.5px;&quot;&gt;Attributes:&lt;/b&gt;&lt;br/&gt;+ id : bigint [PK]&lt;br/&gt;+ name : varchar(255)&lt;br/&gt;+ email : varchar(255) [UQ]&lt;br/&gt;+ password : varchar(255)&lt;br/&gt;+ remember_token : varchar(100)&lt;br/&gt;+ created_at : timestamp&lt;br/&gt;+ updated_at : timestamp&lt;hr style=&quot;border:none;border-top:1.5px solid #BFDBFE;margin:10px 0;&quot;/&gt;&lt;b style=&quot;color:#1E40AF;font-family:sans-serif;font-size:15.5px;&quot;&gt;Methods &amp;amp; Relations:&lt;/b&gt;&lt;br/&gt;+ employee() : HasOne&lt;br/&gt;+ roles() : BelongsToMany&lt;br/&gt;+ permissions() : BelongsToMany&lt;br/&gt;+ hasRole(role: string) : bool&lt;br/&gt;+ can(permission: string) : bool&lt;/div&gt;" vertex="1">
+          <mxGeometry height="430" width="400" x="50" y="140" as="geometry" />
         </mxCell>
-        
-        <mxCell id="cls_div" parent="1" style="rounded=1;whiteSpace=wrap;html=1;overflow=hidden;fillColor=#FFFFFF;strokeColor=#D97706;strokeWidth=1.5;verticalAlign=top;align=left;spacing=0;" value="&lt;div style=&quot;background-color:#D97706;color:#ffffff;padding:8px 12px;font-size:14px;text-align:center;font-weight:bold;border-top-left-radius:6px;border-top-right-radius:6px;&quot;&gt;Division&lt;br/&gt;&lt;span style=&quot;font-size:11.5px;font-weight:normal;opacity:0.9;&quot;&gt;&amp;laquo;Model / Entity&amp;raquo;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;padding:10px 14px;font-size:12.5px;color:#0F172A;line-height:1.55;font-family:Consolas, 'Courier New', monospace;&quot;&gt;&lt;b style=&quot;color:#92400E;font-family:sans-serif;&quot;&gt;Attributes:&lt;/b&gt;&lt;br/&gt;+ id : bigint [PK]&lt;br/&gt;+ name : varchar(100)&lt;br/&gt;+ code : varchar(20)&lt;br/&gt;+ description : text&lt;br/&gt;+ created_at : timestamp&lt;br/&gt;+ updated_at : timestamp&lt;hr style=&quot;border:none;border-top:1px solid #FDE68A;margin:8px 0;&quot;/&gt;&lt;b style=&quot;color:#92400E;font-family:sans-serif;&quot;&gt;Methods &amp;amp; Relations:&lt;/b&gt;&lt;br/&gt;+ employees() : HasMany&lt;br/&gt;+ tasks() : HasMany&lt;/div&gt;" vertex="1">
-          <mxGeometry height="291" width="302" x="470" y="130" as="geometry" />
+        <mxCell id="cls_div" parent="1" style="rounded=1;whiteSpace=wrap;html=1;overflow=hidden;fillColor=#FFFFFF;strokeColor=#D97706;strokeWidth=2;verticalAlign=top;align=left;spacing=0;" value="&lt;div style=&quot;background-color:#D97706;color:#ffffff;padding:12px 16px;font-size:18px;text-align:center;font-weight:bold;border-top-left-radius:8px;border-top-right-radius:8px;&quot;&gt;Division&lt;br/&gt;&lt;span style=&quot;font-size:13px;font-weight:normal;opacity:0.95;&quot;&gt;&amp;laquo;Model / Entity&amp;raquo;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;padding:14px 18px;font-size:15px;color:#0F172A;line-height:1.65;font-family:Consolas, 'Courier New', monospace;&quot;&gt;&lt;b style=&quot;color:#92400E;font-family:sans-serif;font-size:15.5px;&quot;&gt;Attributes:&lt;/b&gt;&lt;br/&gt;+ id : bigint [PK]&lt;br/&gt;+ name : varchar(100)&lt;br/&gt;+ code : varchar(20)&lt;br/&gt;+ description : text&lt;br/&gt;+ created_at : timestamp&lt;br/&gt;+ updated_at : timestamp&lt;hr style=&quot;border:none;border-top:1.5px solid #FDE68A;margin:10px 0;&quot;/&gt;&lt;b style=&quot;color:#92400E;font-family:sans-serif;font-size:15.5px;&quot;&gt;Methods &amp;amp; Relations:&lt;/b&gt;&lt;br/&gt;+ employees() : HasMany&lt;br/&gt;+ tasks() : HasMany&lt;/div&gt;" vertex="1">
+          <mxGeometry height="380" width="380" x="500" y="140" as="geometry" />
         </mxCell>
-        
-        <mxCell id="cls_kpi" parent="1" style="rounded=1;whiteSpace=wrap;html=1;overflow=hidden;fillColor=#FFFFFF;strokeColor=#9333EA;strokeWidth=1.5;verticalAlign=top;align=left;spacing=0;" value="&lt;div style=&quot;background-color:#9333EA;color:#ffffff;padding:8px 12px;font-size:14px;text-align:center;font-weight:bold;border-top-left-radius:6px;border-top-right-radius:6px;&quot;&gt;KpiCriteria&lt;br/&gt;&lt;span style=&quot;font-size:11.5px;font-weight:normal;opacity:0.9;&quot;&gt;&amp;laquo;Model / Entity&amp;raquo;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;padding:10px 14px;font-size:12.5px;color:#0F172A;line-height:1.55;font-family:Consolas, 'Courier New', monospace;&quot;&gt;&lt;b style=&quot;color:#6B21A8;font-family:sans-serif;&quot;&gt;Attributes:&lt;/b&gt;&lt;br/&gt;+ id : bigint [PK]&lt;br/&gt;+ name : varchar(150)&lt;br/&gt;+ weight : decimal(5,2)&lt;br/&gt;+ description : text&lt;br/&gt;+ created_at : timestamp&lt;br/&gt;+ updated_at : timestamp&lt;hr style=&quot;border:none;border-top:1px solid #E9D5FF;margin:8px 0;&quot;/&gt;&lt;b style=&quot;color:#6B21A8;font-family:sans-serif;&quot;&gt;Methods &amp;amp; Relations:&lt;/b&gt;&lt;br/&gt;+ evaluations() : HasMany&lt;/div&gt;" vertex="1">
-          <mxGeometry height="280" width="302" x="870" y="130" as="geometry" />
+        <mxCell id="cls_kpi" parent="1" style="rounded=1;whiteSpace=wrap;html=1;overflow=hidden;fillColor=#FFFFFF;strokeColor=#9333EA;strokeWidth=2;verticalAlign=top;align=left;spacing=0;" value="&lt;div style=&quot;background-color:#9333EA;color:#ffffff;padding:12px 16px;font-size:18px;text-align:center;font-weight:bold;border-top-left-radius:8px;border-top-right-radius:8px;&quot;&gt;KpiCriteria&lt;br/&gt;&lt;span style=&quot;font-size:13px;font-weight:normal;opacity:0.95;&quot;&gt;&amp;laquo;Model / Entity&amp;raquo;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;padding:14px 18px;font-size:15px;color:#0F172A;line-height:1.65;font-family:Consolas, 'Courier New', monospace;&quot;&gt;&lt;b style=&quot;color:#6B21A8;font-family:sans-serif;font-size:15.5px;&quot;&gt;Attributes:&lt;/b&gt;&lt;br/&gt;+ id : bigint [PK]&lt;br/&gt;+ name : varchar(150)&lt;br/&gt;+ weight : decimal(5,2)&lt;br/&gt;+ description : text&lt;br/&gt;+ created_at : timestamp&lt;br/&gt;+ updated_at : timestamp&lt;hr style=&quot;border:none;border-top:1.5px solid #E9D5FF;margin:10px 0;&quot;/&gt;&lt;b style=&quot;color:#6B21A8;font-family:sans-serif;font-size:15.5px;&quot;&gt;Methods &amp;amp; Relations:&lt;/b&gt;&lt;br/&gt;+ evaluations() : HasMany&lt;/div&gt;" vertex="1">
+          <mxGeometry height="370" width="380" x="930" y="140" as="geometry" />
         </mxCell>
-        
-        <mxCell id="cls_audit" parent="1" style="rounded=1;whiteSpace=wrap;html=1;overflow=hidden;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.5;verticalAlign=top;align=left;spacing=0;" value="&lt;div style=&quot;background-color:#475569;color:#ffffff;padding:8px 12px;font-size:14px;text-align:center;font-weight:bold;border-top-left-radius:6px;border-top-right-radius:6px;&quot;&gt;Activity / AuditLog&lt;br/&gt;&lt;span style=&quot;font-size:11.5px;font-weight:normal;opacity:0.9;&quot;&gt;&amp;laquo;Spatie ActivityLog&amp;raquo;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;padding:10px 14px;font-size:12.5px;color:#0F172A;line-height:1.55;font-family:Consolas, 'Courier New', monospace;&quot;&gt;&lt;b style=&quot;color:#334155;font-family:sans-serif;&quot;&gt;Attributes:&lt;/b&gt;&lt;br/&gt;+ id : bigint [PK]&lt;br/&gt;+ log_name : varchar(255)&lt;br/&gt;+ description : text&lt;br/&gt;+ subject_type : varchar(255)&lt;br/&gt;+ subject_id : bigint&lt;br/&gt;+ causer_id : bigint [FK]&lt;br/&gt;+ properties : json&lt;br/&gt;+ created_at : timestamp&lt;hr style=&quot;border:none;border-top:1px solid #CBD5E1;margin:8px 0;&quot;/&gt;&lt;b style=&quot;color:#334155;font-family:sans-serif;&quot;&gt;Methods &amp;amp; Relations:&lt;/b&gt;&lt;br/&gt;+ causer() : MorphTo&lt;br/&gt;+ subject() : MorphTo&lt;/div&gt;" vertex="1">
-          <mxGeometry height="324" width="324" x="1260" y="130" as="geometry" />
+        <mxCell id="cls_audit" parent="1" style="rounded=1;whiteSpace=wrap;html=1;overflow=hidden;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=2;verticalAlign=top;align=left;spacing=0;" value="&lt;div style=&quot;background-color:#475569;color:#ffffff;padding:12px 16px;font-size:18px;text-align:center;font-weight:bold;border-top-left-radius:8px;border-top-right-radius:8px;&quot;&gt;Activity / AuditLog&lt;br/&gt;&lt;span style=&quot;font-size:13px;font-weight:normal;opacity:0.95;&quot;&gt;&amp;laquo;Spatie ActivityLog&amp;raquo;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;padding:14px 18px;font-size:15px;color:#0F172A;line-height:1.65;font-family:Consolas, 'Courier New', monospace;&quot;&gt;&lt;b style=&quot;color:#334155;font-family:sans-serif;font-size:15.5px;&quot;&gt;Attributes:&lt;/b&gt;&lt;br/&gt;+ id : bigint [PK]&lt;br/&gt;+ log_name : varchar(255)&lt;br/&gt;+ description : text&lt;br/&gt;+ subject_type : varchar(255)&lt;br/&gt;+ subject_id : bigint&lt;br/&gt;+ causer_id : bigint [FK]&lt;br/&gt;+ properties : json&lt;br/&gt;+ created_at : timestamp&lt;hr style=&quot;border:none;border-top:1.5px solid #CBD5E1;margin:10px 0;&quot;/&gt;&lt;b style=&quot;color:#334155;font-family:sans-serif;font-size:15.5px;&quot;&gt;Methods &amp;amp; Relations:&lt;/b&gt;&lt;br/&gt;+ causer() : MorphTo&lt;br/&gt;+ subject() : MorphTo&lt;/div&gt;" vertex="1">
+          <mxGeometry height="430" width="420" x="1360" y="140" as="geometry" />
         </mxCell>
-        
-        <mxCell id="cls_emp" parent="1" style="rounded=1;whiteSpace=wrap;html=1;overflow=hidden;fillColor=#FFFFFF;strokeColor=#16A34A;strokeWidth=1.5;verticalAlign=top;align=left;spacing=0;" value="&lt;div style=&quot;background-color:#16A34A;color:#ffffff;padding:8px 12px;font-size:14px;text-align:center;font-weight:bold;border-top-left-radius:6px;border-top-right-radius:6px;&quot;&gt;Employee&lt;br/&gt;&lt;span style=&quot;font-size:11.5px;font-weight:normal;opacity:0.9;&quot;&gt;&amp;laquo;Model / Entity&amp;raquo;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;padding:10px 14px;font-size:12.5px;color:#0F172A;line-height:1.55;font-family:Consolas, 'Courier New', monospace;&quot;&gt;&lt;b style=&quot;color:#166534;font-family:sans-serif;&quot;&gt;Attributes:&lt;/b&gt;&lt;br/&gt;+ id : bigint [PK]&lt;br/&gt;+ user_id : bigint [FK]&lt;br/&gt;+ division_id : bigint [FK]&lt;br/&gt;+ nip : varchar(50)&lt;br/&gt;+ name : varchar(255)&lt;br/&gt;+ position : varchar(100)&lt;br/&gt;+ phone : varchar(20)&lt;br/&gt;+ address : text&lt;br/&gt;+ created_at : timestamp&lt;br/&gt;+ updated_at : timestamp&lt;hr style=&quot;border:none;border-top:1px solid #BBF7D0;margin:8px 0;&quot;/&gt;&lt;b style=&quot;color:#166534;font-family:sans-serif;&quot;&gt;Methods &amp;amp; Relations:&lt;/b&gt;&lt;br/&gt;+ user() : BelongsTo&lt;br/&gt;+ division() : BelongsTo&lt;br/&gt;+ tasks() : HasMany&lt;br/&gt;+ evaluations() : HasMany&lt;/div&gt;" vertex="1">
-          <mxGeometry height="388" width="367" x="180" y="520" as="geometry" />
+        <mxCell id="cls_emp" parent="1" style="rounded=1;whiteSpace=wrap;html=1;overflow=hidden;fillColor=#FFFFFF;strokeColor=#16A34A;strokeWidth=2;verticalAlign=top;align=left;spacing=0;" value="&lt;div style=&quot;background-color:#16A34A;color:#ffffff;padding:12px 16px;font-size:18px;text-align:center;font-weight:bold;border-top-left-radius:8px;border-top-right-radius:8px;&quot;&gt;Employee&lt;br/&gt;&lt;span style=&quot;font-size:13px;font-weight:normal;opacity:0.95;&quot;&gt;&amp;laquo;Model / Entity&amp;raquo;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;padding:14px 18px;font-size:15px;color:#0F172A;line-height:1.65;font-family:Consolas, 'Courier New', monospace;&quot;&gt;&lt;b style=&quot;color:#166534;font-family:sans-serif;font-size:15.5px;&quot;&gt;Attributes:&lt;/b&gt;&lt;br/&gt;+ id : bigint [PK]&lt;br/&gt;+ user_id : bigint [FK]&lt;br/&gt;+ division_id : bigint [FK]&lt;br/&gt;+ nip : varchar(50) [UQ]&lt;br/&gt;+ name : varchar(255)&lt;br/&gt;+ position : varchar(100)&lt;br/&gt;+ phone : varchar(20)&lt;br/&gt;+ address : text&lt;br/&gt;+ created_at : timestamp&lt;br/&gt;+ updated_at : timestamp&lt;hr style=&quot;border:none;border-top:1.5px solid #BBF7D0;margin:10px 0;&quot;/&gt;&lt;b style=&quot;color:#166534;font-family:sans-serif;font-size:15.5px;&quot;&gt;Methods &amp;amp; Relations:&lt;/b&gt;&lt;br/&gt;+ user() : BelongsTo&lt;br/&gt;+ division() : BelongsTo&lt;br/&gt;+ tasks() : HasMany&lt;br/&gt;+ evaluations() : HasMany&lt;/div&gt;" vertex="1">
+          <mxGeometry height="510" width="440" x="120" y="630" as="geometry" />
         </mxCell>
-        
-        <mxCell id="cls_task" parent="1" style="rounded=1;whiteSpace=wrap;html=1;overflow=hidden;fillColor=#FFFFFF;strokeColor=#1D4ED8;strokeWidth=1.5;verticalAlign=top;align=left;spacing=0;" value="&lt;div style=&quot;background-color:#1D4ED8;color:#ffffff;padding:8px 12px;font-size:14px;text-align:center;font-weight:bold;border-top-left-radius:6px;border-top-right-radius:6px;&quot;&gt;Task&lt;br/&gt;&lt;span style=&quot;font-size:11.5px;font-weight:normal;opacity:0.9;&quot;&gt;&amp;laquo;Model / Entity&amp;raquo;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;padding:10px 14px;font-size:12.5px;color:#0F172A;line-height:1.55;font-family:Consolas, 'Courier New', monospace;&quot;&gt;&lt;b style=&quot;color:#1E3A8A;font-family:sans-serif;&quot;&gt;Attributes:&lt;/b&gt;&lt;br/&gt;+ id : bigint [PK]&lt;br/&gt;+ created_by_manager_id : bigint [FK]&lt;br/&gt;+ assigned_employee_id : bigint [FK]&lt;br/&gt;+ division_id : bigint [FK]&lt;br/&gt;+ title : varchar(255)&lt;br/&gt;+ description : text&lt;br/&gt;+ weight : int&lt;br/&gt;+ weight_score : int&lt;br/&gt;+ status : enum(Pending,In_Prog,Subm,Appr,Rej)&lt;br/&gt;+ start_date : datetime&lt;br/&gt;+ deadline : datetime&lt;br/&gt;+ created_at / updated_at : timestamp&lt;hr style=&quot;border:none;border-top:1px solid #BFDBFE;margin:8px 0;&quot;/&gt;&lt;b style=&quot;color:#1E3A8A;font-family:sans-serif;&quot;&gt;Methods &amp;amp; Relations:&lt;/b&gt;&lt;br/&gt;+ submissions() : HasMany&lt;br/&gt;+ employee() : BelongsTo&lt;br/&gt;+ manager() : BelongsTo&lt;br/&gt;+ division() : BelongsTo&lt;/div&gt;" vertex="1">
-          <mxGeometry height="453" width="399" x="720" y="490" as="geometry" />
+        <mxCell id="cls_task" parent="1" style="rounded=1;whiteSpace=wrap;html=1;overflow=hidden;fillColor=#FFFFFF;strokeColor=#1D4ED8;strokeWidth=2;verticalAlign=top;align=left;spacing=0;" value="&lt;div style=&quot;background-color:#1D4ED8;color:#ffffff;padding:12px 16px;font-size:18px;text-align:center;font-weight:bold;border-top-left-radius:8px;border-top-right-radius:8px;&quot;&gt;Task&lt;br/&gt;&lt;span style=&quot;font-size:13px;font-weight:normal;opacity:0.95;&quot;&gt;&amp;laquo;Model / Entity&amp;raquo;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;padding:14px 18px;font-size:15px;color:#0F172A;line-height:1.65;font-family:Consolas, 'Courier New', monospace;&quot;&gt;&lt;b style=&quot;color:#1E3A8A;font-family:sans-serif;font-size:15.5px;&quot;&gt;Attributes:&lt;/b&gt;&lt;br/&gt;+ id : bigint [PK]&lt;br/&gt;+ created_by_manager_id : bigint [FK]&lt;br/&gt;+ assigned_employee_id : bigint [FK]&lt;br/&gt;+ division_id : bigint [FK]&lt;br/&gt;+ title : varchar(255)&lt;br/&gt;+ description : text&lt;br/&gt;+ weight : int&lt;br/&gt;+ weight_score : int&lt;br/&gt;+ status : enum(Pending, In_Prog, Subm, Appr, Rej)&lt;br/&gt;+ start_date : datetime&lt;br/&gt;+ deadline : datetime&lt;br/&gt;+ created_at / updated_at : timestamp&lt;hr style=&quot;border:none;border-top:1.5px solid #BFDBFE;margin:10px 0;&quot;/&gt;&lt;b style=&quot;color:#1E3A8A;font-family:sans-serif;font-size:15.5px;&quot;&gt;Methods &amp;amp; Relations:&lt;/b&gt;&lt;br/&gt;+ submissions() : HasMany&lt;br/&gt;+ employee() : BelongsTo&lt;br/&gt;+ manager() : BelongsTo&lt;br/&gt;+ division() : BelongsTo&lt;/div&gt;" vertex="1">
+          <mxGeometry height="580" width="540" x="660" y="590" as="geometry" />
         </mxCell>
-        
-        <mxCell id="cls_sub" parent="1" style="rounded=1;whiteSpace=wrap;html=1;overflow=hidden;fillColor=#FFFFFF;strokeColor=#DB2777;strokeWidth=1.5;verticalAlign=top;align=left;spacing=0;" value="&lt;div style=&quot;background-color:#DB2777;color:#ffffff;padding:8px 12px;font-size:14px;text-align:center;font-weight:bold;border-top-left-radius:6px;border-top-right-radius:6px;&quot;&gt;TaskSubmission&lt;br/&gt;&lt;span style=&quot;font-size:11.5px;font-weight:normal;opacity:0.9;&quot;&gt;&amp;laquo;Model / Entity&amp;raquo;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;padding:10px 14px;font-size:12.5px;color:#0F172A;line-height:1.55;font-family:Consolas, 'Courier New', monospace;&quot;&gt;&lt;b style=&quot;color:#9D174D;font-family:sans-serif;&quot;&gt;Attributes:&lt;/b&gt;&lt;br/&gt;+ id : bigint [PK]&lt;br/&gt;+ task_id : bigint [FK]&lt;br/&gt;+ submission_file : varchar(255)&lt;br/&gt;+ submission_link : text&lt;br/&gt;+ notes : text&lt;br/&gt;+ reviewed_by : bigint [FK]&lt;br/&gt;+ review_notes : text&lt;br/&gt;+ is_late : boolean&lt;br/&gt;+ submitted_at : timestamp&lt;br/&gt;+ created_at / updated_at : timestamp&lt;hr style=&quot;border:none;border-top:1px solid #FBCFE8;margin:8px 0;&quot;/&gt;&lt;b style=&quot;color:#9D174D;font-family:sans-serif;&quot;&gt;Methods &amp;amp; Relations:&lt;/b&gt;&lt;br/&gt;+ task() : BelongsTo&lt;br/&gt;+ reviewer() : BelongsTo&lt;/div&gt;" vertex="1">
-          <mxGeometry height="378" width="356" x="1240" y="520" as="geometry" />
+        <mxCell id="cls_sub" parent="1" style="rounded=1;whiteSpace=wrap;html=1;overflow=hidden;fillColor=#FFFFFF;strokeColor=#DB2777;strokeWidth=2;verticalAlign=top;align=left;spacing=0;" value="&lt;div style=&quot;background-color:#DB2777;color:#ffffff;padding:12px 16px;font-size:18px;text-align:center;font-weight:bold;border-top-left-radius:8px;border-top-right-radius:8px;&quot;&gt;TaskSubmission&lt;br/&gt;&lt;span style=&quot;font-size:13px;font-weight:normal;opacity:0.95;&quot;&gt;&amp;laquo;Model / Entity&amp;raquo;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;padding:14px 18px;font-size:15px;color:#0F172A;line-height:1.65;font-family:Consolas, 'Courier New', monospace;&quot;&gt;&lt;b style=&quot;color:#9D174D;font-family:sans-serif;font-size:15.5px;&quot;&gt;Attributes:&lt;/b&gt;&lt;br/&gt;+ id : bigint [PK]&lt;br/&gt;+ task_id : bigint [FK]&lt;br/&gt;+ submission_file : varchar(255)&lt;br/&gt;+ submission_link : text&lt;br/&gt;+ notes : text&lt;br/&gt;+ reviewed_by : bigint [FK]&lt;br/&gt;+ review_notes : text&lt;br/&gt;+ is_late : boolean&lt;br/&gt;+ submitted_at : timestamp&lt;br/&gt;+ created_at / updated_at : timestamp&lt;hr style=&quot;border:none;border-top:1.5px solid #FBCFE8;margin:10px 0;&quot;/&gt;&lt;b style=&quot;color:#9D174D;font-family:sans-serif;font-size:15.5px;&quot;&gt;Methods &amp;amp; Relations:&lt;/b&gt;&lt;br/&gt;+ task() : BelongsTo&lt;br/&gt;+ reviewer() : BelongsTo&lt;/div&gt;" vertex="1">
+          <mxGeometry height="500" width="460" x="1300" y="630" as="geometry" />
         </mxCell>
-        
-        <mxCell id="cls_eval" parent="1" style="rounded=1;whiteSpace=wrap;html=1;overflow=hidden;fillColor=#FFFFFF;strokeColor=#0D9488;strokeWidth=1.5;verticalAlign=top;align=left;spacing=0;" value="&lt;div style=&quot;background-color:#0D9488;color:#ffffff;padding:8px 12px;font-size:14px;text-align:center;font-weight:bold;border-top-left-radius:6px;border-top-right-radius:6px;&quot;&gt;PerformanceEvaluation&lt;br/&gt;&lt;span style=&quot;font-size:11.5px;font-weight:normal;opacity:0.9;&quot;&gt;&amp;laquo;Model / Entity&amp;raquo;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;padding:10px 14px;font-size:12.5px;color:#0F172A;line-height:1.55;font-family:Consolas, 'Courier New', monospace;&quot;&gt;&lt;b style=&quot;color:#115E59;font-family:sans-serif;&quot;&gt;Attributes:&lt;/b&gt;&lt;br/&gt;+ id : bigint [PK]&lt;br/&gt;+ employee_id : bigint [FK]&lt;br/&gt;+ evaluated_by_manager_id : bigint [FK]&lt;br/&gt;+ kpi_criteria_id : bigint [FK]&lt;br/&gt;+ task_id : bigint [FK]&lt;br/&gt;+ task_score : decimal(5,2)&lt;br/&gt;+ kpi_score : decimal(5,2)&lt;br/&gt;+ final_score : decimal(5,2)&lt;br/&gt;+ grade : enum(A, B, C, D, E)&lt;br/&gt;+ feedback_notes : text&lt;br/&gt;+ period_month / period_year : int&lt;br/&gt;+ created_at / updated_at : timestamp&lt;hr style=&quot;border:none;border-top:1px solid #99F6E4;margin:8px 0;&quot;/&gt;&lt;b style=&quot;color:#115E59;font-family:sans-serif;&quot;&gt;Methods &amp;amp; Relations:&lt;/b&gt;&lt;br/&gt;+ employee() : BelongsTo&lt;br/&gt;+ evaluator() : BelongsTo&lt;br/&gt;+ kpiCriteria() : BelongsTo&lt;br/&gt;+ task() : BelongsTo&lt;/div&gt;" vertex="1">
-          <mxGeometry height="421" width="421" x="460" y="990" as="geometry" />
+        <mxCell id="cls_eval" parent="1" style="rounded=1;whiteSpace=wrap;html=1;overflow=hidden;fillColor=#FFFFFF;strokeColor=#0D9488;strokeWidth=2;verticalAlign=top;align=left;spacing=0;" value="&lt;div style=&quot;background-color:#0D9488;color:#ffffff;padding:12px 16px;font-size:18px;text-align:center;font-weight:bold;border-top-left-radius:8px;border-top-right-radius:8px;&quot;&gt;PerformanceEvaluation&lt;br/&gt;&lt;span style=&quot;font-size:13px;font-weight:normal;opacity:0.95;&quot;&gt;&amp;laquo;Model / Entity&amp;raquo;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;padding:14px 18px;font-size:15px;color:#0F172A;line-height:1.65;font-family:Consolas, 'Courier New', monospace;&quot;&gt;&lt;b style=&quot;color:#115E59;font-family:sans-serif;font-size:15.5px;&quot;&gt;Attributes:&lt;/b&gt;&lt;br/&gt;+ id : bigint [PK]&lt;br/&gt;+ employee_id : bigint [FK]&lt;br/&gt;+ evaluated_by_manager_id : bigint [FK]&lt;br/&gt;+ kpi_criteria_id : bigint [FK]&lt;br/&gt;+ task_id : bigint [FK]&lt;br/&gt;+ task_score : decimal(5,2)&lt;br/&gt;+ kpi_score : decimal(5,2)&lt;br/&gt;+ final_score : decimal(5,2)&lt;br/&gt;+ grade : enum(A, B, C, D, E)&lt;br/&gt;+ feedback_notes : text&lt;br/&gt;+ period_month / period_year : int&lt;br/&gt;+ created_at / updated_at : timestamp&lt;hr style=&quot;border:none;border-top:1.5px solid #99F6E4;margin:10px 0;&quot;/&gt;&lt;b style=&quot;color:#115E59;font-family:sans-serif;font-size:15.5px;&quot;&gt;Methods &amp;amp; Relations:&lt;/b&gt;&lt;br/&gt;+ employee() : BelongsTo&lt;br/&gt;+ evaluator() : BelongsTo&lt;br/&gt;+ kpiCriteria() : BelongsTo&lt;br/&gt;+ task() : BelongsTo&lt;/div&gt;" vertex="1">
+          <mxGeometry height="560" width="540" x="460" y="1230" as="geometry" />
         </mxCell>
-        
-        <mxCell id="rel_u_emp" edge="1" parent="1" source="cls_user" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#2563EB;strokeWidth=2;fontSize=13;fontColor=#1E293B;" target="cls_emp" value="1..1">
+        <mxCell id="rel_u_emp" edge="1" parent="1" source="cls_user" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#2563EB;strokeWidth=2.5;fontSize=15;fontColor=#1E293B;exitX=0.5;exitY=1;entryX=0.3;entryY=0;" target="cls_emp" value="1..1">
           <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="210" y="470" />
-              <mxPoint x="290" y="470" />
-            </Array>
-          </mxGeometry>
+            <Array as="points"><mxPoint x="250" y="570" /><mxPoint x="250" y="630" /></Array></mxGeometry>
         </mxCell>
-        <mxCell id="lbl_u_emp" connectable="0" parent="rel_u_emp" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontColor=#475569;" value="has profile &gt;" vertex="1">
+        <mxCell id="lbl_u_emp" connectable="0" parent="rel_u_emp" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#0F172A;" value="has profile &gt;" vertex="1">
           <mxGeometry relative="1" x="0.1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="rel_div_emp" edge="1" parent="1" source="cls_div" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#D97706;strokeWidth=2;fontSize=13;fontColor=#1E293B;" target="cls_emp" value="1              1..*">
+        <mxCell id="rel_div_emp" edge="1" parent="1" source="cls_div" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#D97706;strokeWidth=2.5;fontSize=15;fontColor=#1E293B;exitX=0.3;exitY=1;entryX=0.8;entryY=0;" target="cls_emp" value="1              1..*">
           <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="610" y="440" />
-              <mxPoint x="430" y="440" />
-            </Array>
-          </mxGeometry>
+            <Array as="points"><mxPoint x="614" y="520" /><mxPoint x="614" y="575" /><mxPoint x="472" y="575" /><mxPoint x="472" y="630" /></Array></mxGeometry>
         </mxCell>
-        <mxCell id="lbl_div_emp" connectable="0" parent="rel_div_emp" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontColor=#475569;" value="places in &gt;" vertex="1">
+        <mxCell id="lbl_div_emp" connectable="0" parent="rel_div_emp" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#0F172A;" value="places in &gt;" vertex="1">
           <mxGeometry relative="1" x="0.2" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="rel_div_task" edge="1" parent="1" source="cls_div" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#D97706;strokeWidth=2;fontSize=13;fontColor=#1E293B;" target="cls_task" value="1             0..*">
+        <mxCell id="rel_div_task" edge="1" parent="1" source="cls_div" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#D97706;strokeWidth=2.5;fontSize=15;fontColor=#1E293B;exitX=0.8;exitY=1;entryX=0.3;entryY=0;" target="cls_task" value="1             0..*">
           <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="700" y="430" />
-              <mxPoint x="810" y="430" />
-            </Array>
-          </mxGeometry>
+            <Array as="points"><mxPoint x="804" y="520" /><mxPoint x="804" y="590" /></Array></mxGeometry>
         </mxCell>
-        <mxCell id="rel_emp_task" edge="1" parent="1" source="cls_emp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#16A34A;strokeWidth=2;fontSize=13;fontColor=#1E293B;" target="cls_task" value="1              0..*">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="rel_emp_task" edge="1" parent="1" source="cls_emp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#16A34A;strokeWidth=2.5;fontSize=15;fontColor=#1E293B;exitX=1;exitY=0.35;entryX=0;entryY=0.42;" target="cls_task" value="1              0..*">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="560" y="810" /><mxPoint x="660" y="810" /></Array></mxGeometry>
         </mxCell>
-        <mxCell id="lbl_emp_task" connectable="0" parent="rel_emp_task" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontColor=#475569;" value="is assigned &gt;" vertex="1">
+        <mxCell id="lbl_emp_task" connectable="0" parent="rel_emp_task" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#0F172A;" value="is assigned &gt;" vertex="1">
           <mxGeometry relative="1" x="-0.1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="rel_task_sub" edge="1" parent="1" source="cls_task" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#2563EB;strokeWidth=2;fontSize=13;fontColor=#1E293B;" target="cls_sub" value="1              1..*">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="rel_task_sub" edge="1" parent="1" source="cls_task" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#2563EB;strokeWidth=2.5;fontSize=15;fontColor=#1E293B;exitX=1;exitY=0.42;entryX=0;entryY=0.36;" target="cls_sub" value="1              1..*">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1200" y="810" /><mxPoint x="1300" y="810" /></Array></mxGeometry>
         </mxCell>
-        <mxCell id="lbl_task_sub" connectable="0" parent="rel_task_sub" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontColor=#475569;" value="has evidence &gt;" vertex="1">
+        <mxCell id="lbl_task_sub" connectable="0" parent="rel_task_sub" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#0F172A;" value="has evidence &gt;" vertex="1">
           <mxGeometry relative="1" x="0.1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="rel_emp_eval" edge="1" parent="1" source="cls_emp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#16A34A;strokeWidth=2;fontSize=13;fontColor=#1E293B;" target="cls_eval" value="1              0..*">
+        <mxCell id="rel_emp_eval" edge="1" parent="1" source="cls_emp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#16A34A;strokeWidth=2.5;fontSize=15;fontColor=#1E293B;exitX=0.5;exitY=1;entryX=0.2;entryY=0;" target="cls_eval" value="1              0..*">
           <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="350" y="930" />
-              <mxPoint x="550" y="930" />
-            </Array>
-          </mxGeometry>
+            <Array as="points"><mxPoint x="340" y="1140" /><mxPoint x="340" y="1190" /><mxPoint x="568" y="1190" /><mxPoint x="568" y="1230" /></Array></mxGeometry>
         </mxCell>
-        <mxCell id="lbl_emp_eval" connectable="0" parent="rel_emp_eval" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontColor=#475569;" value="evaluates &gt;" vertex="1">
+        <mxCell id="lbl_emp_eval" connectable="0" parent="rel_emp_eval" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#0F172A;" value="evaluates &gt;" vertex="1">
           <mxGeometry relative="1" x="0.1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="rel_task_eval" edge="1" parent="1" source="cls_task" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#1D4ED8;strokeWidth=2;fontSize=13;fontColor=#1E293B;" target="cls_eval" value="1              0..*">
+        <mxCell id="rel_task_eval" edge="1" parent="1" source="cls_task" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#1D4ED8;strokeWidth=2.5;fontSize=15;fontColor=#1E293B;exitX=0.4;exitY=1;entryX=0.75;entryY=0;" target="cls_eval" value="1              0..*">
           <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="900" y="940" />
-              <mxPoint x="730" y="940" />
-            </Array>
-          </mxGeometry>
+            <Array as="points"><mxPoint x="876" y="1170" /><mxPoint x="876" y="1230" /></Array></mxGeometry>
         </mxCell>
-        <mxCell id="rel_kpi_eval" edge="1" parent="1" source="cls_kpi" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#9333EA;strokeWidth=2;fontSize=13;fontColor=#1E293B;" target="cls_eval" value="1              0..*">
+        <mxCell id="rel_kpi_eval" edge="1" parent="1" source="cls_kpi" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#9333EA;strokeWidth=2.5;fontSize=15;fontColor=#1E293B;exitX=0.6;exitY=1;entryX=1;entryY=0.35;" target="cls_eval" value="1              0..*">
           <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="1160" y="250" />
-              <mxPoint x="1160" y="1080" />
-              <mxPoint x="850" y="1080" />
-            </Array>
-          </mxGeometry>
+            <Array as="points"><mxPoint x="1158" y="510" /><mxPoint x="1240" y="510" /><mxPoint x="1240" y="1426" /><mxPoint x="1000" y="1426" /></Array></mxGeometry>
         </mxCell>
-        <mxCell id="lbl_kpi_eval" connectable="0" parent="rel_kpi_eval" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontColor=#475569;" value="scored by &gt;" vertex="1">
+        <mxCell id="lbl_kpi_eval" connectable="0" parent="rel_kpi_eval" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#0F172A;" value="scored by &gt;" vertex="1">
           <mxGeometry relative="1" x="0.3" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
