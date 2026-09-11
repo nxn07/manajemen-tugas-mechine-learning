@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='utf-8'?>
 <mxfile host="app.diagrams.net" compressed="false" pages="39">
   <diagram id="uc-main" name="1. Use Case Diagram (12 UC)">
     <mxGraphModel dx="2069" dy="2339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1650" pageHeight="1150" math="0" shadow="0">
@@ -59,13 +58,13 @@
         <mxCell id="rel_inc_3" edge="1" parent="uc_box" source="uc12" style="edgeStyle=straight;html=1;dashed=1;endArrow=open;strokeColor=#475569;strokeWidth=1.5;fontSize=12;fontColor=#334155;fontStyle=1;" target="uc11" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="act_emp" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#DCFCE7;strokeColor=#16A34A;fontSize=20;fontColor=#14532D;" value="🧑‍💻&#10;&lt;b&gt;Pegawai (Employee)&lt;/b&gt;&#10;Staf Pelaksana Tugas" vertex="1">
+        <mxCell id="act_emp" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#DCFCE7;strokeColor=#16A34A;fontSize=20;fontColor=#14532D;" value="🧑‍💻&#xa;&lt;b&gt;Pegawai (Employee)&lt;/b&gt;&#xa;Staf Pelaksana Tugas" vertex="1">
           <mxGeometry height="95" width="50" x="170" y="380" as="geometry" />
         </mxCell>
-        <mxCell id="act_mgr" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#DBEAFE;strokeColor=#2563EB;fontSize=20;fontColor=#1E3A8A;" value="👔&#10;&lt;b&gt;Manager (Kadiv)&lt;/b&gt;&#10;Kepala Divisi / Evaluator" vertex="1">
+        <mxCell id="act_mgr" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#DBEAFE;strokeColor=#2563EB;fontSize=20;fontColor=#1E3A8A;" value="👔&#xa;&lt;b&gt;Manager (Kadiv)&lt;/b&gt;&#xa;Kepala Divisi / Evaluator" vertex="1">
           <mxGeometry height="95" width="50" x="1590" y="270" as="geometry" />
         </mxCell>
-        <mxCell id="act_adm" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#FEF3C7;strokeColor=#D97706;fontSize=20;fontColor=#78350F;" value="👑&#10;&lt;b&gt;Administrator&lt;/b&gt;&#10;Pengelola Master &amp;amp; RBAC" vertex="1">
+        <mxCell id="act_adm" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#FEF3C7;strokeColor=#D97706;fontSize=20;fontColor=#78350F;" value="👑&#xa;&lt;b&gt;Administrator&lt;/b&gt;&#xa;Pengelola Master &amp;amp; RBAC" vertex="1">
           <mxGeometry height="95" width="50" x="1620" y="720" as="geometry" />
         </mxCell>
         <mxCell id="e_emp_uc01" edge="1" parent="1" source="act_emp" style="edgeStyle=straight;html=1;endArrow=none;strokeColor=#16A34A;strokeWidth=2;exitX=1;exitY=0.2;entryX=0;entryY=0.5;" target="uc01">
@@ -151,28 +150,28 @@
         <mxCell id="ad-uc01_u_start" value="" style="ellipse;fillColor=#111827;strokeColor=#111827;" vertex="1" parent="ad-uc01_lane_u">
           <mxGeometry x="100" y="50" width="24" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc01_u_open" value="Buka Form Login &amp;&#10;Input Email &amp; Password" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc01_lane_u">
+        <mxCell id="ad-uc01_u_open" value="Buka Form Login &amp;&#xa;Input Email &amp; Password" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc01_lane_u">
           <mxGeometry x="25" y="100" width="220" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ad-uc01_u_submit" value="Klik Tombol &quot;Sign In&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc01_lane_u">
           <mxGeometry x="25" y="180" width="220" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc01_s_val" value="Validasi Format Email&#10;&amp; Keberadaan Akun" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc01_lane_s">
+        <mxCell id="ad-uc01_s_val" value="Validasi Format Email&#xa;&amp; Keberadaan Akun" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc01_lane_s">
           <mxGeometry x="70" y="180" width="240" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc01_s_check" value="Kredensial&#10;Valid?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;fontSize=12.5;" vertex="1" parent="ad-uc01_lane_s">
+        <mxCell id="ad-uc01_s_check" value="Kredensial&#xa;Valid?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;fontSize=12.5;" vertex="1" parent="ad-uc01_lane_s">
           <mxGeometry x="100" y="260" width="170" height="85" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc01_s_err" value="Tampilkan Pesan Error:&#10;&quot;Email atau password salah&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc01_lane_s">
+        <mxCell id="ad-uc01_s_err" value="Tampilkan Pesan Error:&#xa;&quot;Email atau password salah&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc01_lane_s">
           <mxGeometry x="70" y="365" width="240" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ad-uc01_u_retry" value="Perbaiki Input Kredensial" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc01_lane_u">
           <mxGeometry x="25" y="365" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc01_s_token" value="Generate Sanctum Token &amp;&#10;Load Permissions Spatie" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc01_lane_s">
+        <mxCell id="ad-uc01_s_token" value="Generate Sanctum Token &amp;&#xa;Load Permissions Spatie" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc01_lane_s">
           <mxGeometry x="70" y="460" width="240" height="65" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc01_s_dash" value="Redirect ke Halaman Dashboard&#10;Sesuai Role Pengguna" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc01_lane_s">
+        <mxCell id="ad-uc01_s_dash" value="Redirect ke Halaman Dashboard&#xa;Sesuai Role Pengguna" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc01_lane_s">
           <mxGeometry x="70" y="545" width="240" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ad-uc01_u_view" value="Masuk Dashboard Utama" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc01_lane_u">
@@ -234,19 +233,19 @@
         <mxCell id="ad-uc02_u_start" value="" style="ellipse;fillColor=#111827;strokeColor=#111827;" vertex="1" parent="ad-uc02_lane_u">
           <mxGeometry x="100" y="50" width="24" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc02_u_click" value="Pilih Menu Profil &amp;&#10;Klik Tombol &quot;Logout&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc02_lane_u">
+        <mxCell id="ad-uc02_u_click" value="Pilih Menu Profil &amp;&#xa;Klik Tombol &quot;Logout&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc02_lane_u">
           <mxGeometry x="25" y="105" width="220" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ad-uc02_u_conf" value="Konfirmasi Keluar Sesi" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc02_lane_u">
           <mxGeometry x="25" y="185" width="220" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc02_s_revoke" value="Hapus Token Sanctum Aktif&#10;dari Database / Cache" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc02_lane_s">
+        <mxCell id="ad-uc02_s_revoke" value="Hapus Token Sanctum Aktif&#xa;dari Database / Cache" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc02_lane_s">
           <mxGeometry x="70" y="185" width="240" height="65" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc02_s_clear" value="Hapus State Sesi &amp; Cookie&#10;pada Browser Client" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc02_lane_s">
+        <mxCell id="ad-uc02_s_clear" value="Hapus State Sesi &amp; Cookie&#xa;pada Browser Client" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc02_lane_s">
           <mxGeometry x="70" y="275" width="240" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc02_s_redir" value="Arahkan (*Redirect*) Kembali&#10;ke Halaman Login" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc02_lane_s">
+        <mxCell id="ad-uc02_s_redir" value="Arahkan (*Redirect*) Kembali&#xa;ke Halaman Login" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc02_lane_s">
           <mxGeometry x="70" y="360" width="240" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ad-uc02_u_login_page" value="Melihat Halaman Login" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc02_lane_u">
@@ -296,31 +295,31 @@
         <mxCell id="ad-uc03_u_start" value="" style="ellipse;fillColor=#111827;strokeColor=#111827;" vertex="1" parent="ad-uc03_lane_u">
           <mxGeometry x="100" y="50" width="24" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc03_u_open" value="Buka Menu Manajemen User &amp;&#10;Klik &quot;Tambah Pengguna&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc03_lane_u">
+        <mxCell id="ad-uc03_u_open" value="Buka Menu Manajemen User &amp;&#xa;Klik &quot;Tambah Pengguna&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc03_lane_u">
           <mxGeometry x="25" y="100" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc03_u_form" value="Input Nama, Email, Password,&#10;Pilih Divisi &amp; Role Spatie" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc03_lane_u">
+        <mxCell id="ad-uc03_u_form" value="Input Nama, Email, Password,&#xa;Pilih Divisi &amp; Role Spatie" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc03_lane_u">
           <mxGeometry x="25" y="180" width="220" height="65" as="geometry" />
         </mxCell>
         <mxCell id="ad-uc03_u_save" value="Klik Tombol &quot;Simpan Akun&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc03_lane_u">
           <mxGeometry x="25" y="265" width="220" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc03_s_val" value="Validasi Email Unik &amp;&#10;Kelengkapan Form" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc03_lane_s">
+        <mxCell id="ad-uc03_s_val" value="Validasi Email Unik &amp;&#xa;Kelengkapan Form" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc03_lane_s">
           <mxGeometry x="70" y="260" width="240" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc03_s_check" value="Email Sudah&#10;Terdaftar?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;fontSize=12.5;" vertex="1" parent="ad-uc03_lane_s">
+        <mxCell id="ad-uc03_s_check" value="Email Sudah&#xa;Terdaftar?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;fontSize=12.5;" vertex="1" parent="ad-uc03_lane_s">
           <mxGeometry x="100" y="340" width="170" height="85" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc03_s_err" value="Tampilkan Pesan Peringatan:&#10;&quot;Email sudah digunakan&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc03_lane_s">
+        <mxCell id="ad-uc03_s_err" value="Tampilkan Pesan Peringatan:&#xa;&quot;Email sudah digunakan&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc03_lane_s">
           <mxGeometry x="70" y="445" width="240" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ad-uc03_u_fix" value="Ubah Alamat Email" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc03_lane_u">
           <mxGeometry x="25" y="445" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc03_s_save" value="Bcrypt Password &amp; Simpan User,&#10;Assign Role (ADMIN/MGR/EMP)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc03_lane_s">
+        <mxCell id="ad-uc03_s_save" value="Bcrypt Password &amp; Simpan User,&#xa;Assign Role (ADMIN/MGR/EMP)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc03_lane_s">
           <mxGeometry x="70" y="530" width="240" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc03_s_resp" value="Tampilkan Toast Sukses &amp;&#10;Perbarui Tabel Pengguna" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc03_lane_s">
+        <mxCell id="ad-uc03_s_resp" value="Tampilkan Toast Sukses &amp;&#xa;Perbarui Tabel Pengguna" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc03_lane_s">
           <mxGeometry x="70" y="620" width="240" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ad-uc03_u_done" value="Melihat Akun Baru di Tabel" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc03_lane_u">
@@ -385,22 +384,22 @@
         <mxCell id="ad-uc04_u_start" value="" style="ellipse;fillColor=#111827;strokeColor=#111827;" vertex="1" parent="ad-uc04_lane_u">
           <mxGeometry x="100" y="50" width="24" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc04_u_open" value="Buka Menu Master Divisi &amp;&#10;Klik &quot;Tambah Divisi&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc04_lane_u">
+        <mxCell id="ad-uc04_u_open" value="Buka Menu Master Divisi &amp;&#xa;Klik &quot;Tambah Divisi&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc04_lane_u">
           <mxGeometry x="25" y="100" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc04_u_form" value="Input Kode Divisi (DIV-XX),&#10;Nama Divisi &amp; Deskripsi" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc04_lane_u">
+        <mxCell id="ad-uc04_u_form" value="Input Kode Divisi (DIV-XX),&#xa;Nama Divisi &amp; Deskripsi" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc04_lane_u">
           <mxGeometry x="25" y="180" width="220" height="65" as="geometry" />
         </mxCell>
         <mxCell id="ad-uc04_u_save" value="Klik &quot;Simpan Divisi&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc04_lane_u">
           <mxGeometry x="25" y="265" width="220" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc04_s_val" value="Validasi Format &amp; Keunikan&#10;Kode Divisi di Database" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc04_lane_s">
+        <mxCell id="ad-uc04_s_val" value="Validasi Format &amp; Keunikan&#xa;Kode Divisi di Database" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc04_lane_s">
           <mxGeometry x="70" y="260" width="240" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc04_s_check" value="Kode Divisi&#10;Unik?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;fontSize=12.5;" vertex="1" parent="ad-uc04_lane_s">
+        <mxCell id="ad-uc04_s_check" value="Kode Divisi&#xa;Unik?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;fontSize=12.5;" vertex="1" parent="ad-uc04_lane_s">
           <mxGeometry x="100" y="340" width="170" height="85" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc04_s_err" value="Tampilkan Pesan Peringatan:&#10;&quot;Kode Divisi sudah ada&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc04_lane_s">
+        <mxCell id="ad-uc04_s_err" value="Tampilkan Pesan Peringatan:&#xa;&quot;Kode Divisi sudah ada&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc04_lane_s">
           <mxGeometry x="70" y="445" width="240" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ad-uc04_u_fix" value="Koreksi Kode Divisi" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc04_lane_u">
@@ -474,22 +473,22 @@
         <mxCell id="ad-uc05_u_start" value="" style="ellipse;fillColor=#111827;strokeColor=#111827;" vertex="1" parent="ad-uc05_lane_u">
           <mxGeometry x="100" y="50" width="24" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc05_u_open" value="Buka Menu Kriteria KPI &amp;&#10;Pilih &quot;Tambah Indikator&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc05_lane_u">
+        <mxCell id="ad-uc05_u_open" value="Buka Menu Kriteria KPI &amp;&#xa;Pilih &quot;Tambah Indikator&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc05_lane_u">
           <mxGeometry x="25" y="100" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc05_u_form" value="Input Nama Kriteria, Deskripsi&#10;&amp; Bobot Persentase (%)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc05_lane_u">
+        <mxCell id="ad-uc05_u_form" value="Input Nama Kriteria, Deskripsi&#xa;&amp; Bobot Persentase (%)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc05_lane_u">
           <mxGeometry x="25" y="180" width="220" height="65" as="geometry" />
         </mxCell>
         <mxCell id="ad-uc05_u_save" value="Klik &quot;Simpan Kriteria&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc05_lane_u">
           <mxGeometry x="25" y="265" width="220" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc05_s_val" value="Cek Akumulasi Bobot KPI:&#10;Total Bobot &amp;lt;= 100%?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc05_lane_s">
+        <mxCell id="ad-uc05_s_val" value="Cek Akumulasi Bobot KPI:&#xa;Total Bobot &amp;lt;= 100%?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc05_lane_s">
           <mxGeometry x="70" y="260" width="240" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc05_s_check" value="Total Bobot&#10;&amp;lt;= 100%?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;fontSize=12.5;" vertex="1" parent="ad-uc05_lane_s">
+        <mxCell id="ad-uc05_s_check" value="Total Bobot&#xa;&amp;lt;= 100%?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;fontSize=12.5;" vertex="1" parent="ad-uc05_lane_s">
           <mxGeometry x="100" y="340" width="170" height="85" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc05_s_err" value="Tolak Input: Akumulasi Bobot&#10;Melebihi Batas 100%" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc05_lane_s">
+        <mxCell id="ad-uc05_s_err" value="Tolak Input: Akumulasi Bobot&#xa;Melebihi Batas 100%" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc05_lane_s">
           <mxGeometry x="70" y="445" width="240" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ad-uc05_u_fix" value="Sesuaikan Nilai Bobot" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc05_lane_u">
@@ -563,19 +562,19 @@
         <mxCell id="ad-uc06_u_start" value="" style="ellipse;fillColor=#111827;strokeColor=#111827;" vertex="1" parent="ad-uc06_lane_u">
           <mxGeometry x="100" y="50" width="24" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc06_u_open" value="Buka Menu Tugas &amp;&#10;Klik &quot;Buat Tugas Baru&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc06_lane_u">
+        <mxCell id="ad-uc06_u_open" value="Buka Menu Tugas &amp;&#xa;Klik &quot;Buat Tugas Baru&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc06_lane_u">
           <mxGeometry x="25" y="100" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc06_u_form" value="Input Judul, Deskripsi,&#10;Pilih Pegawai, Deadline&#10;&amp; Bobot Tugas (1-10)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc06_lane_u">
+        <mxCell id="ad-uc06_u_form" value="Input Judul, Deskripsi,&#xa;Pilih Pegawai, Deadline&#xa;&amp; Bobot Tugas (1-10)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc06_lane_u">
           <mxGeometry x="25" y="180" width="220" height="70" as="geometry" />
         </mxCell>
         <mxCell id="ad-uc06_u_save" value="Klik &quot;Distribusikan Tugas&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc06_lane_u">
           <mxGeometry x="25" y="270" width="220" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc06_s_val" value="Validasi Permission (tasks.create)&#10;&amp; Pegawai di Bawah Divisi" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc06_lane_s">
+        <mxCell id="ad-uc06_s_val" value="Validasi Permission (tasks.create)&#xa;&amp; Pegawai di Bawah Divisi" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc06_lane_s">
           <mxGeometry x="70" y="265" width="240" height="65" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc06_s_check" value="Otorisasi &amp;&#10;Form Valid?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;fontSize=12.5;" vertex="1" parent="ad-uc06_lane_s">
+        <mxCell id="ad-uc06_s_check" value="Otorisasi &amp;&#xa;Form Valid?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;fontSize=12.5;" vertex="1" parent="ad-uc06_lane_s">
           <mxGeometry x="100" y="350" width="170" height="85" as="geometry" />
         </mxCell>
         <mxCell id="ad-uc06_s_err" value="Tampilkan Pesan Error Validasi" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc06_lane_s">
@@ -584,10 +583,10 @@
         <mxCell id="ad-uc06_u_fix" value="Lengkapi Form Tugas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc06_lane_u">
           <mxGeometry x="25" y="455" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc06_s_save" value="Simpan Data ke Tabel tasks&#10;dengan status &lt;b&gt;PENDING&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc06_lane_s">
+        <mxCell id="ad-uc06_s_save" value="Simpan Data ke Tabel tasks&#xa;dengan status &lt;b&gt;PENDING&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc06_lane_s">
           <mxGeometry x="70" y="540" width="240" height="65" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc06_s_notify" value="Kirim Notifikasi ke Pegawai &amp;&#10;Refresh Kanban/Tabel Tugas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc06_lane_s">
+        <mxCell id="ad-uc06_s_notify" value="Kirim Notifikasi ke Pegawai &amp;&#xa;Refresh Kanban/Tabel Tugas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc06_lane_s">
           <mxGeometry x="70" y="625" width="240" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ad-uc06_u_done" value="Tugas Muncul di Antrean" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc06_lane_u">
@@ -655,16 +654,16 @@
         <mxCell id="ad-uc07_u_open" value="Buka Dashboard Tugas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc07_lane_u">
           <mxGeometry x="25" y="105" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc07_u_filter" value="Pilih Filter: Status (Pending,&#10;Progress, Submitted, Approved)&#10;atau Cari Kata Kunci" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc07_lane_u">
+        <mxCell id="ad-uc07_u_filter" value="Pilih Filter: Status (Pending,&#xa;Progress, Submitted, Approved)&#xa;atau Cari Kata Kunci" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc07_lane_u">
           <mxGeometry x="25" y="185" width="220" height="65" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc07_s_scope" value="Periksa Scope Hak Akses:&#10;Pegawai=Tugas Sendiri,&#10;Manager=Divisi, Admin=Semua" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc07_lane_s">
+        <mxCell id="ad-uc07_s_scope" value="Periksa Scope Hak Akses:&#xa;Pegawai=Tugas Sendiri,&#xa;Manager=Divisi, Admin=Semua" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc07_lane_s">
           <mxGeometry x="70" y="185" width="240" height="65" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc07_s_fetch" value="Query Database tasks Sesuai&#10;Filter &amp; Status Terkini" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc07_lane_s">
+        <mxCell id="ad-uc07_s_fetch" value="Query Database tasks Sesuai&#xa;Filter &amp; Status Terkini" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc07_lane_s">
           <mxGeometry x="70" y="275" width="240" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc07_s_render" value="Render Kartu Tugas beserta&#10;Indikator Deadline &amp; Status" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc07_lane_s">
+        <mxCell id="ad-uc07_s_render" value="Render Kartu Tugas beserta&#xa;Indikator Deadline &amp; Status" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc07_lane_s">
           <mxGeometry x="70" y="360" width="240" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ad-uc07_u_view" value="Memantau Progres Pengerjaan" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc07_lane_u">
@@ -714,28 +713,28 @@
         <mxCell id="ad-uc08_u_start" value="" style="ellipse;fillColor=#111827;strokeColor=#111827;" vertex="1" parent="ad-uc08_lane_u">
           <mxGeometry x="100" y="50" width="24" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc08_u_pick" value="Pilih Tugas Berstatus PENDING /&#10;REVISION &amp; Klik Kerjakan" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc08_lane_u">
+        <mxCell id="ad-uc08_u_pick" value="Pilih Tugas Berstatus PENDING /&#xa;REVISION &amp; Klik Kerjakan" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc08_lane_u">
           <mxGeometry x="25" y="100" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc08_s_prog" value="Ubah Status Tugas -&amp;gt;&#10;&lt;b&gt;IN_PROGRESS&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc08_lane_s">
+        <mxCell id="ad-uc08_s_prog" value="Ubah Status Tugas -&amp;gt;&#xa;&lt;b&gt;IN_PROGRESS&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc08_lane_s">
           <mxGeometry x="70" y="100" width="240" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc08_u_form" value="Upload Berkas PDF/Gambar,&#10;Input URL Link Hasil Kerja&#10;&amp; Catatan Pengerjaan" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc08_lane_u">
+        <mxCell id="ad-uc08_u_form" value="Upload Berkas PDF/Gambar,&#xa;Input URL Link Hasil Kerja&#xa;&amp; Catatan Pengerjaan" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc08_lane_u">
           <mxGeometry x="25" y="180" width="220" height="70" as="geometry" />
         </mxCell>
         <mxCell id="ad-uc08_u_submit" value="Klik &quot;Kirim Bukti Kerja&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc08_lane_u">
           <mxGeometry x="25" y="270" width="220" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc08_s_val" value="Validasi Tipe &amp; Ukuran File,&#10;Cek Waktu Deadline" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc08_lane_s">
+        <mxCell id="ad-uc08_s_val" value="Validasi Tipe &amp; Ukuran File,&#xa;Cek Waktu Deadline" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc08_lane_s">
           <mxGeometry x="70" y="265" width="240" height="65" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc08_s_save" value="Simpan File ke Disk Storage &amp;&#10;Record ke task_submissions" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc08_lane_s">
+        <mxCell id="ad-uc08_s_save" value="Simpan File ke Disk Storage &amp;&#xa;Record ke task_submissions" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc08_lane_s">
           <mxGeometry x="70" y="350" width="240" height="65" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc08_s_status" value="Update Status Tugas menjadi&#10;&lt;b&gt;SUBMITTED&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc08_lane_s">
+        <mxCell id="ad-uc08_s_status" value="Update Status Tugas menjadi&#xa;&lt;b&gt;SUBMITTED&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc08_lane_s">
           <mxGeometry x="70" y="435" width="240" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc08_s_toast" value="Kirim Notifikasi Tugas Masuk&#10;ke Dashboard Manager" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc08_lane_s">
+        <mxCell id="ad-uc08_s_toast" value="Kirim Notifikasi Tugas Masuk&#xa;ke Dashboard Manager" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc08_lane_s">
           <mxGeometry x="70" y="515" width="240" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ad-uc08_u_done" value="Status Berubah &quot;SUBMITTED&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc08_lane_u">
@@ -794,25 +793,25 @@
         <mxCell id="ad-uc09_u_start" value="" style="ellipse;fillColor=#111827;strokeColor=#111827;" vertex="1" parent="ad-uc09_lane_u">
           <mxGeometry x="100" y="50" width="24" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc09_u_open" value="Buka Antrean Review Tugas &amp;&#10;Pilih Tugas SUBMITTED" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc09_lane_u">
+        <mxCell id="ad-uc09_u_open" value="Buka Antrean Review Tugas &amp;&#xa;Pilih Tugas SUBMITTED" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc09_lane_u">
           <mxGeometry x="25" y="100" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc09_u_inspect" value="Periksa File Lampiran / URL&#10;serta Catatan Pegawai" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc09_lane_u">
+        <mxCell id="ad-uc09_u_inspect" value="Periksa File Lampiran / URL&#xa;serta Catatan Pegawai" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc09_lane_u">
           <mxGeometry x="25" y="180" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc09_u_decide" value="Hasil Kerja&#10;Disetujui?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;fontSize=12.5;" vertex="1" parent="ad-uc09_lane_u">
+        <mxCell id="ad-uc09_u_decide" value="Hasil Kerja&#xa;Disetujui?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;fontSize=12.5;" vertex="1" parent="ad-uc09_lane_u">
           <mxGeometry x="45" y="260" width="170" height="85" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc09_u_rev" value="Input Catatan Revisi &amp;&#10;Pilih Status: REVISION" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc09_lane_u">
+        <mxCell id="ad-uc09_u_rev" value="Input Catatan Revisi &amp;&#xa;Pilih Status: REVISION" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc09_lane_u">
           <mxGeometry x="25" y="365" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc09_u_app" value="Input Catatan Apresiasi &amp;&#10;Pilih Status: APPROVED" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc09_lane_u">
+        <mxCell id="ad-uc09_u_app" value="Input Catatan Apresiasi &amp;&#xa;Pilih Status: APPROVED" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc09_lane_u">
           <mxGeometry x="25" y="445" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc09_s_proc" value="Update task_submissions&#10;&amp; Set Status tasks:&#10;REVISION atau APPROVED" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc09_lane_s">
+        <mxCell id="ad-uc09_s_proc" value="Update task_submissions&#xa;&amp; Set Status tasks:&#xa;REVISION atau APPROVED" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc09_lane_s">
           <mxGeometry x="70" y="400" width="240" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc09_s_notify" value="Kirim Notifikasi Hasil Review&#10;ke Pegawai Bersangkutan" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc09_lane_s">
+        <mxCell id="ad-uc09_s_notify" value="Kirim Notifikasi Hasil Review&#xa;ke Pegawai Bersangkutan" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc09_lane_s">
           <mxGeometry x="70" y="495" width="240" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ad-uc09_u_done" value="Hasil Review Terverifikasi" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc09_lane_u">
@@ -871,22 +870,22 @@
         <mxCell id="ad-uc10_u_start" value="" style="ellipse;fillColor=#111827;strokeColor=#111827;" vertex="1" parent="ad-uc10_lane_u">
           <mxGeometry x="100" y="50" width="24" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc10_u_open" value="Buka Form Penilaian KPI &amp;&#10;Pilih Pegawai &amp; Periode" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc10_lane_u">
+        <mxCell id="ad-uc10_u_open" value="Buka Form Penilaian KPI &amp;&#xa;Pilih Pegawai &amp; Periode" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc10_lane_u">
           <mxGeometry x="25" y="100" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc10_s_load" value="Tampilkan Daftar Indikator KPI&#10;&amp; Bobot Persentasenya" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc10_lane_s">
+        <mxCell id="ad-uc10_s_load" value="Tampilkan Daftar Indikator KPI&#xa;&amp; Bobot Persentasenya" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc10_lane_s">
           <mxGeometry x="70" y="100" width="240" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc10_u_input" value="Input Skor Angka (0-100)&#10;pada Tiap Indikator&#10;(Kedisiplinan, Kualitas, Tim)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc10_lane_u">
+        <mxCell id="ad-uc10_u_input" value="Input Skor Angka (0-100)&#xa;pada Tiap Indikator&#xa;(Kedisiplinan, Kualitas, Tim)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc10_lane_u">
           <mxGeometry x="25" y="185" width="220" height="70" as="geometry" />
         </mxCell>
         <mxCell id="ad-uc10_u_save" value="Klik &quot;Simpan Penilaian KPI&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc10_lane_u">
           <mxGeometry x="25" y="275" width="220" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc10_s_val" value="Validasi Range Nilai (0-100)&#10;&amp; Akumulasi Bobot Indikator" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc10_lane_s">
+        <mxCell id="ad-uc10_s_val" value="Validasi Range Nilai (0-100)&#xa;&amp; Akumulasi Bobot Indikator" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc10_lane_s">
           <mxGeometry x="70" y="270" width="240" height="65" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc10_s_calc" value="Hitung Skor Total KPI:&#10;Sum(Nilai * Bobot KPI)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc10_lane_s">
+        <mxCell id="ad-uc10_s_calc" value="Hitung Skor Total KPI:&#xa;Sum(Nilai * Bobot KPI)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc10_lane_s">
           <mxGeometry x="70" y="355" width="240" height="65" as="geometry" />
         </mxCell>
         <mxCell id="ad-uc10_s_save" value="Simpan Record Penilaian ke DB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc10_lane_s">
@@ -951,25 +950,25 @@
         <mxCell id="ad-uc11_u_start" value="" style="ellipse;fillColor=#111827;strokeColor=#111827;" vertex="1" parent="ad-uc11_lane_u">
           <mxGeometry x="100" y="50" width="24" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc11_u_open" value="Buka Menu Evaluasi Bulanan&#10;&amp; Pilih Pegawai" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc11_lane_u">
+        <mxCell id="ad-uc11_u_open" value="Buka Menu Evaluasi Bulanan&#xa;&amp; Pilih Pegawai" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc11_lane_u">
           <mxGeometry x="25" y="100" width="220" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ad-uc11_u_trigger" value="Klik &quot;Kalkulasi Skor Kinerja&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc11_lane_u">
           <mxGeometry x="25" y="180" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc11_s_task" value="Ambil Rata-rata Skor Tugas&#10;APPROVED -&amp;gt; &lt;b&gt;Task_Score&lt;/b&gt;&#10;(Bobot Porsi 60%)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc11_lane_s">
+        <mxCell id="ad-uc11_s_task" value="Ambil Rata-rata Skor Tugas&#xa;APPROVED -&amp;gt; &lt;b&gt;Task_Score&lt;/b&gt;&#xa;(Bobot Porsi 60%)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc11_lane_s">
           <mxGeometry x="70" y="175" width="240" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc11_s_kpi" value="Ambil Skor Total Kriteria&#10;KPI -&amp;gt; &lt;b&gt;KPI_Score&lt;/b&gt;&#10;(Bobot Porsi 40%)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc11_lane_s">
+        <mxCell id="ad-uc11_s_kpi" value="Ambil Skor Total Kriteria&#xa;KPI -&amp;gt; &lt;b&gt;KPI_Score&lt;/b&gt;&#xa;(Bobot Porsi 40%)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc11_lane_s">
           <mxGeometry x="70" y="260" width="240" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc11_s_formula" value="Eksekusi Formula Penilaian:&#10;&lt;b&gt;Final = (Task*0.6) + (KPI*0.4)&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc11_lane_s">
+        <mxCell id="ad-uc11_s_formula" value="Eksekusi Formula Penilaian:&#xa;&lt;b&gt;Final = (Task*0.6) + (KPI*0.4)&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc11_lane_s">
           <mxGeometry x="70" y="345" width="240" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc11_s_grade" value="Konversi Nilai ke Grade:&#10;&amp;gt;=85: A | &amp;gt;=75: B | &amp;gt;=65: C&#10;&amp;gt;=50: D | &amp;lt;50: E" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc11_lane_s">
+        <mxCell id="ad-uc11_s_grade" value="Konversi Nilai ke Grade:&#xa;&amp;gt;=85: A | &amp;gt;=75: B | &amp;gt;=65: C&#xa;&amp;gt;=50: D | &amp;lt;50: E" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc11_lane_s">
           <mxGeometry x="70" y="430" width="240" height="85" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc11_s_save" value="Simpan Rekapitulasi ke Tabel&#10;performance_evaluations" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc11_lane_s">
+        <mxCell id="ad-uc11_s_save" value="Simpan Rekapitulasi ke Tabel&#xa;performance_evaluations" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc11_lane_s">
           <mxGeometry x="70" y="530" width="240" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ad-uc11_s_pub" value="Terbitkan Scorecard Kinerja" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc11_lane_s">
@@ -1031,13 +1030,13 @@
         <mxCell id="ad-uc12_u_start" value="" style="ellipse;fillColor=#111827;strokeColor=#111827;" vertex="1" parent="ad-uc12_lane_u">
           <mxGeometry x="100" y="50" width="24" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc12_u_open" value="Buka Menu Kartu Kinerja&#10;(Scorecard) &amp; Pilih Periode" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc12_lane_u">
+        <mxCell id="ad-uc12_u_open" value="Buka Menu Kartu Kinerja&#xa;(Scorecard) &amp; Pilih Periode" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc12_lane_u">
           <mxGeometry x="25" y="100" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc12_s_fetch" value="Query performance_evaluations,&#10;Detail Nilai Tugas &amp; KPI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc12_lane_s">
+        <mxCell id="ad-uc12_s_fetch" value="Query performance_evaluations,&#xa;Detail Nilai Tugas &amp; KPI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc12_lane_s">
           <mxGeometry x="70" y="100" width="240" height="65" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc12_s_render" value="Render Kartu Skor, Grafik&#10;&amp; Grade Hasil Evaluasi" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc12_lane_s">
+        <mxCell id="ad-uc12_s_render" value="Render Kartu Skor, Grafik&#xa;&amp; Grade Hasil Evaluasi" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc12_lane_s">
           <mxGeometry x="70" y="185" width="240" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ad-uc12_u_view" value="Melihat Hasil Evaluasi" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc12_lane_u">
@@ -1046,7 +1045,7 @@
         <mxCell id="ad-uc12_u_click_export" value="Klik Tombol &quot;Export PDF&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=13;spacing=4;" vertex="1" parent="ad-uc12_lane_u">
           <mxGeometry x="25" y="265" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ad-uc12_s_gen_pdf" value="Generate Dokumen PDF&#10;Laporan Kinerja Resmi" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc12_lane_s">
+        <mxCell id="ad-uc12_s_gen_pdf" value="Generate Dokumen PDF&#xa;Laporan Kinerja Resmi" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc12_lane_s">
           <mxGeometry x="70" y="265" width="240" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ad-uc12_s_download" value="Kirim File Stream PDF" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=13;spacing=4;" vertex="1" parent="ad-uc12_lane_s">
@@ -1657,7 +1656,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="sd-uc06_m_3" value="4. createTask(data, status='PENDING')" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#1E293B;fontSize=12;fontColor=#1E293B;" edge="1" parent="1">
+        <mxCell id="sd-uc06_m_3" value="4. createTask(data, status=&#39;PENDING&#39;)" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#1E293B;fontSize=12;fontColor=#1E293B;" edge="1" parent="1">
           <mxGeometry width="80" relative="1" as="geometry">
             <mxPoint x="605" y="320" as="sourcePoint" />
             <mxPoint x="845" y="320" as="targetPoint" />
@@ -1845,7 +1844,7 @@
             <mxPoint x="605" y="370" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="sd-uc08_m_5" value="6. updateTaskStatus(taskId, 'SUBMITTED')" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#1E293B;fontSize=12;fontColor=#1E293B;" edge="1" parent="1">
+        <mxCell id="sd-uc08_m_5" value="6. updateTaskStatus(taskId, &#39;SUBMITTED&#39;)" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#1E293B;fontSize=12;fontColor=#1E293B;" edge="1" parent="1">
           <mxGeometry width="80" relative="1" as="geometry">
             <mxPoint x="605" y="420" as="sourcePoint" />
             <mxPoint x="845" y="420" as="targetPoint" />
@@ -1863,7 +1862,7 @@
             <mxPoint x="365" y="520" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="sd-uc08_m_8" value="9. updateBadgeStatus('SUBMITTED')" style="html=1;verticalAlign=bottom;endArrow=block;dashed=1;strokeColor=#1E293B;fontSize=12;fontColor=#1E293B;" edge="1" parent="1">
+        <mxCell id="sd-uc08_m_8" value="9. updateBadgeStatus(&#39;SUBMITTED&#39;)" style="html=1;verticalAlign=bottom;endArrow=block;dashed=1;strokeColor=#1E293B;fontSize=12;fontColor=#1E293B;" edge="1" parent="1">
           <mxGeometry width="80" relative="1" as="geometry">
             <mxPoint x="365" y="570" as="sourcePoint" />
             <mxPoint x="140" y="570" as="targetPoint" />
@@ -1940,7 +1939,7 @@
             <mxPoint x="605" y="320" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="sd-uc09_m_4" value="5. setTaskStatus(taskId, 'APPROVED'/'REVISION')" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#1E293B;fontSize=12;fontColor=#1E293B;" edge="1" parent="1">
+        <mxCell id="sd-uc09_m_4" value="5. setTaskStatus(taskId, &#39;APPROVED&#39;/&#39;REVISION&#39;)" style="html=1;verticalAlign=bottom;endArrow=block;strokeColor=#1E293B;fontSize=12;fontColor=#1E293B;" edge="1" parent="1">
           <mxGeometry width="80" relative="1" as="geometry">
             <mxPoint x="605" y="370" as="sourcePoint" />
             <mxPoint x="845" y="370" as="targetPoint" />
@@ -2458,11 +2457,101 @@
     </mxGraphModel>
   </diagram>
   <diagram id="erd-diagram" name="31. ERD (Entity Relationship Diagram)">
-    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1850" pageHeight="1150" math="0" shadow="0">
+    <mxGraphModel dx="2069" dy="1189" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1850" pageHeight="1150" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="erd_banner" parent="1" vertex="1" value="&lt;div style=&quot;font-family:sans-serif;text-align:center;padding:12px 20px;&quot;&gt;&lt;div style=&quot;font-size:20px;font-weight:bold;color:#FFFFFF;letter-spacing:0.5px;margin-bottom:5px;&quot;&gt;ENTITY RELATIONSHIP DIAGRAM (ERD) — SISTEM INFORMASI EVALUASI KINERJA PEGAWAI (SIM-KAP)&lt;/div&gt;&lt;div style=&quot;font-size:13.5px;color:#CBD5E1;font-style:italic;&quot;&gt;Skema Fisik Database Relasional PostgreSQL: Primary Keys (PK), Foreign Keys (FK), dan Derajat Kardinalitas Relasi&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;overflow=hidden;fillColor=#1E293B;strokeColor=#475569;strokeWidth=2;verticalAlign=middle;align=center;shadow=1;"><mxGeometry x="60" y="22" width="1630" height="74" as="geometry" /></mxCell><mxCell id="erd_users" value="users" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=34;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;fillColor=#2563EB;fontColor=#FFFFFF;strokeColor=#1D4ED8;strokeWidth=2;fontSize=15;fontFamily=sans-serif;" vertex="1" parent="1"><mxGeometry x="60" y="130" width="330" height="225" as="geometry" /></mxCell><mxCell id="erd_users_body" value="&lt;b style=&quot;color:#2563EB;&quot;&gt;PK&lt;/b&gt; id : bigint&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;name : varchar(255)&lt;br/&gt;&lt;b style=&quot;color:#D97706;&quot;&gt;UQ&lt;/b&gt; email : varchar(255)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;password : varchar(255)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;remember_token : varchar(100)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;created_at : timestamp&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;updated_at : timestamp" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=top;spacingLeft=12;spacingRight=12;spacingTop=8;spacingBottom=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#0F172A;fontSize=13.5;fontFamily=Consolas,monospace;" vertex="1" parent="erd_users"><mxGeometry x="0" y="34" width="330" height="191" as="geometry" /></mxCell><mxCell id="erd_m_roles" value="model_has_roles" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=34;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;fillColor=#D97706;fontColor=#FFFFFF;strokeColor=#B45309;strokeWidth=2;fontSize=15;fontFamily=sans-serif;" vertex="1" parent="1"><mxGeometry x="60" y="400" width="330" height="135" as="geometry" /></mxCell><mxCell id="erd_m_roles_body" value="&lt;b style=&quot;color:#16A34A;&quot;&gt;FK&lt;/b&gt; role_id : bigint&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;model_type : varchar(255)&lt;br/&gt;&lt;b style=&quot;color:#16A34A;&quot;&gt;FK&lt;/b&gt; model_id : bigint" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=top;spacingLeft=12;spacingRight=12;spacingTop=8;spacingBottom=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#0F172A;fontSize=13.5;fontFamily=Consolas,monospace;" vertex="1" parent="erd_m_roles"><mxGeometry x="0" y="34" width="330" height="101" as="geometry" /></mxCell><mxCell id="erd_roles" value="roles (Spatie)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=34;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;fillColor=#D97706;fontColor=#FFFFFF;strokeColor=#B45309;strokeWidth=2;fontSize=15;fontFamily=sans-serif;" vertex="1" parent="1"><mxGeometry x="60" y="580" width="330" height="180" as="geometry" /></mxCell><mxCell id="erd_roles_body" value="&lt;b style=&quot;color:#2563EB;&quot;&gt;PK&lt;/b&gt; id : bigint&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;name : varchar(255)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;guard_name : varchar(255)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;created_at : timestamp&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;updated_at : timestamp" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=top;spacingLeft=12;spacingRight=12;spacingTop=8;spacingBottom=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#0F172A;fontSize=13.5;fontFamily=Consolas,monospace;" vertex="1" parent="erd_roles"><mxGeometry x="0" y="34" width="330" height="146" as="geometry" /></mxCell><mxCell id="erd_employees" value="employees" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=34;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;fillColor=#16A34A;fontColor=#FFFFFF;strokeColor=#15803D;strokeWidth=2;fontSize=15;fontFamily=sans-serif;" vertex="1" parent="1"><mxGeometry x="450" y="130" width="340" height="265" as="geometry" /></mxCell><mxCell id="erd_employees_body" value="&lt;b style=&quot;color:#2563EB;&quot;&gt;PK&lt;/b&gt; id : bigint&lt;br/&gt;&lt;b style=&quot;color:#16A34A;&quot;&gt;FK&lt;/b&gt; user_id : bigint&lt;br/&gt;&lt;b style=&quot;color:#16A34A;&quot;&gt;FK&lt;/b&gt; division_id : bigint&lt;br/&gt;&lt;b style=&quot;color:#D97706;&quot;&gt;UQ&lt;/b&gt; nik : varchar(50)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;full_name : varchar(255)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;phone : varchar(50)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;position : varchar(100)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;created_at : timestamp&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;updated_at : timestamp" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=top;spacingLeft=12;spacingRight=12;spacingTop=8;spacingBottom=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#0F172A;fontSize=13.5;fontFamily=Consolas,monospace;" vertex="1" parent="erd_employees"><mxGeometry x="0" y="34" width="340" height="231" as="geometry" /></mxCell><mxCell id="erd_divisions" value="divisions" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=34;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;fillColor=#EA580C;fontColor=#FFFFFF;strokeColor=#C2410C;strokeWidth=2;fontSize=15;fontFamily=sans-serif;" vertex="1" parent="1"><mxGeometry x="450" y="470" width="340" height="175" as="geometry" /></mxCell><mxCell id="erd_divisions_body" value="&lt;b style=&quot;color:#2563EB;&quot;&gt;PK&lt;/b&gt; id : bigint&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;name : varchar(255)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;description : text&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;created_at : timestamp&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;updated_at : timestamp" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=top;spacingLeft=12;spacingRight=12;spacingTop=8;spacingBottom=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#0F172A;fontSize=13.5;fontFamily=Consolas,monospace;" vertex="1" parent="erd_divisions"><mxGeometry x="0" y="34" width="340" height="141" as="geometry" /></mxCell><mxCell id="erd_tasks" value="tasks" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=34;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;fillColor=#1D4ED8;fontColor=#FFFFFF;strokeColor=#1E40AF;strokeWidth=2;fontSize=15;fontFamily=sans-serif;" vertex="1" parent="1"><mxGeometry x="860" y="130" width="380" height="290" as="geometry" /></mxCell><mxCell id="erd_tasks_body" value="&lt;b style=&quot;color:#2563EB;&quot;&gt;PK&lt;/b&gt; id : bigint&lt;br/&gt;&lt;b style=&quot;color:#16A34A;&quot;&gt;FK&lt;/b&gt; created_by_manager_id : bigint&lt;br/&gt;&lt;b style=&quot;color:#16A34A;&quot;&gt;FK&lt;/b&gt; assigned_employee_id : bigint&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;title : varchar(255)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;description : text&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;deadline : datetime&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;weight : int&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;status : enum(PENDING..COMPLETED)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;created_at : timestamp&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;updated_at : timestamp" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=top;spacingLeft=12;spacingRight=12;spacingTop=8;spacingBottom=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#0F172A;fontSize=13.5;fontFamily=Consolas,monospace;" vertex="1" parent="erd_tasks"><mxGeometry x="0" y="34" width="380" height="256" as="geometry" /></mxCell><mxCell id="erd_kpi" value="kpi_criteria" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=34;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;fillColor=#9333EA;fontColor=#FFFFFF;strokeColor=#7E22CE;strokeWidth=2;fontSize=15;fontFamily=sans-serif;" vertex="1" parent="1"><mxGeometry x="860" y="480" width="380" height="200" as="geometry" /></mxCell><mxCell id="erd_kpi_body" value="&lt;b style=&quot;color:#2563EB;&quot;&gt;PK&lt;/b&gt; id : bigint&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;criteria_name : varchar(255)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;weight_percentage : decimal(5,2)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;description : text&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;created_at : timestamp&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;updated_at : timestamp" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=top;spacingLeft=12;spacingRight=12;spacingTop=8;spacingBottom=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#0F172A;fontSize=13.5;fontFamily=Consolas,monospace;" vertex="1" parent="erd_kpi"><mxGeometry x="0" y="34" width="380" height="166" as="geometry" /></mxCell><mxCell id="erd_act" value="activity_log (Audit Trail)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=34;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;fillColor=#475569;fontColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;fontSize=15;fontFamily=sans-serif;" vertex="1" parent="1"><mxGeometry x="860" y="740" width="380" height="265" as="geometry" /></mxCell><mxCell id="erd_act_body" value="&lt;b style=&quot;color:#2563EB;&quot;&gt;PK&lt;/b&gt; id : bigint&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;log_name : varchar(255)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;description : text&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;subject_type : varchar(255)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;subject_id : bigint&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;causer_type : varchar(255)&lt;br/&gt;&lt;b style=&quot;color:#16A34A;&quot;&gt;FK&lt;/b&gt; causer_id : bigint&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;properties : json&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;created_at : timestamp" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=top;spacingLeft=12;spacingRight=12;spacingTop=8;spacingBottom=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#0F172A;fontSize=13.5;fontFamily=Consolas,monospace;" vertex="1" parent="erd_act"><mxGeometry x="0" y="34" width="380" height="231" as="geometry" /></mxCell><mxCell id="erd_sub" value="task_submissions" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=34;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;fillColor=#DB2777;fontColor=#FFFFFF;strokeColor=#BE185D;strokeWidth=2;fontSize=15;fontFamily=sans-serif;" vertex="1" parent="1"><mxGeometry x="1310" y="130" width="360" height="245" as="geometry" /></mxCell><mxCell id="erd_sub_body" value="&lt;b style=&quot;color:#2563EB;&quot;&gt;PK&lt;/b&gt; id : bigint&lt;br/&gt;&lt;b style=&quot;color:#16A34A;&quot;&gt;FK&lt;/b&gt; task_id : bigint&lt;br/&gt;&lt;b style=&quot;color:#16A34A;&quot;&gt;FK&lt;/b&gt; employee_id : bigint&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;file_path : varchar(255)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;notes : text&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;submitted_at : timestamp&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;created_at : timestamp&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;updated_at : timestamp" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=top;spacingLeft=12;spacingRight=12;spacingTop=8;spacingBottom=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#0F172A;fontSize=13.5;fontFamily=Consolas,monospace;" vertex="1" parent="erd_sub"><mxGeometry x="0" y="34" width="360" height="211" as="geometry" /></mxCell><mxCell id="erd_eval" value="performance_evaluations" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=34;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;fillColor=#0D9488;fontColor=#FFFFFF;strokeColor=#0F766E;strokeWidth=2;fontSize=15;fontFamily=sans-serif;" vertex="1" parent="1"><mxGeometry x="1310" y="430" width="380" height="290" as="geometry" /></mxCell><mxCell id="erd_eval_body" value="&lt;b style=&quot;color:#2563EB;&quot;&gt;PK&lt;/b&gt; id : bigint&lt;br/&gt;&lt;b style=&quot;color:#16A34A;&quot;&gt;FK&lt;/b&gt; task_id : bigint&lt;br/&gt;&lt;b style=&quot;color:#16A34A;&quot;&gt;FK&lt;/b&gt; employee_id : bigint&lt;br/&gt;&lt;b style=&quot;color:#16A34A;&quot;&gt;FK&lt;/b&gt; evaluator_manager_id : bigint&lt;br/&gt;&lt;b style=&quot;color:#16A34A;&quot;&gt;FK&lt;/b&gt; kpi_criteria_id : bigint&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;score : decimal(5,2)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;feedback_notes : text&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;evaluated_at : timestamp&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;created_at : timestamp&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;updated_at : timestamp" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=top;spacingLeft=12;spacingRight=12;spacingTop=8;spacingBottom=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#0F172A;fontSize=13.5;fontFamily=Consolas,monospace;" vertex="1" parent="erd_eval"><mxGeometry x="0" y="34" width="380" height="256" as="geometry" /></mxCell><mxCell id="rel_u_e" edge="1" parent="1" source="erd_users" target="erd_employees" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=ERone;endFill=0;startArrow=ERone;startFill=0;strokeColor=#2563EB;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#1E293B;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" value="1 : 1"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="rel_u_m_roles" edge="1" parent="1" source="erd_users" target="erd_m_roles" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=ERoneToMany;endFill=0;startArrow=ERone;startFill=0;strokeColor=#2563EB;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#1E293B;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" value="1 : N"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="rel_r_m_roles" edge="1" parent="1" source="erd_roles" target="erd_m_roles" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=ERoneToMany;endFill=0;startArrow=ERone;startFill=0;strokeColor=#D97706;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#1E293B;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" value="1 : N"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="rel_d_e" edge="1" parent="1" source="erd_divisions" target="erd_employees" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=ERoneToMany;endFill=0;startArrow=ERone;startFill=0;strokeColor=#EA580C;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#1E293B;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" value="1 : N"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="rel_e_t_mgr" edge="1" parent="1" source="erd_employees" target="erd_tasks" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=ERoneToMany;endFill=0;startArrow=ERone;startFill=0;strokeColor=#16A34A;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#1E293B;exitX=1;exitY=0.25;entryX=0;entryY=0.25;" value="1 : N (created_by)"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="rel_e_t_assign" edge="1" parent="1" source="erd_employees" target="erd_tasks" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=ERoneToMany;endFill=0;startArrow=ERone;startFill=0;strokeColor=#16A34A;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#1E293B;exitX=1;exitY=0.75;entryX=0;entryY=0.75;" value="1 : N (assigned_to)"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="rel_t_sub" edge="1" parent="1" source="erd_tasks" target="erd_sub" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=ERoneToMany;endFill=0;startArrow=ERone;startFill=0;strokeColor=#1D4ED8;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#1E293B;exitX=1;exitY=0.45;entryX=0;entryY=0.45;" value="1 : N"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="rel_t_eval" edge="1" parent="1" source="erd_tasks" target="erd_eval" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=ERoneToMany;endFill=0;startArrow=ERone;startFill=0;strokeColor=#1D4ED8;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#1E293B;exitX=1;exitY=0.8;entryX=0;entryY=0.3;" value="1 : N"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="rel_kpi_eval" edge="1" parent="1" source="erd_kpi" target="erd_eval" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=ERoneToMany;endFill=0;startArrow=ERone;startFill=0;strokeColor=#9333EA;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#1E293B;exitX=1;exitY=0.5;entryX=0;entryY=0.75;" value="1 : N"><mxGeometry relative="1" as="geometry" /></mxCell></root>
+        <mxCell id="erd_banner" parent="1" style="rounded=1;whiteSpace=wrap;html=1;overflow=hidden;fillColor=#1E293B;strokeColor=#475569;strokeWidth=2;verticalAlign=middle;align=center;shadow=1;" value="&lt;div style=&quot;font-family:sans-serif;text-align:center;padding:12px 20px;&quot;&gt;&lt;div style=&quot;font-size:20px;font-weight:bold;color:#FFFFFF;letter-spacing:0.5px;margin-bottom:5px;&quot;&gt;ENTITY RELATIONSHIP DIAGRAM (ERD) — SISTEM INFORMASI EVALUASI KINERJA PEGAWAI (SIM-KAP)&lt;/div&gt;&lt;div style=&quot;font-size:13.5px;color:#CBD5E1;font-style:italic;&quot;&gt;Skema Fisik Database Relasional PostgreSQL: Primary Keys (PK), Foreign Keys (FK), dan Derajat Kardinalitas Relasi&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="74" width="1630" x="60" y="22" as="geometry" />
+        </mxCell>
+        <mxCell id="erd_users" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=34;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;fillColor=#2563EB;fontColor=#FFFFFF;strokeColor=#1D4ED8;strokeWidth=2;fontSize=15;fontFamily=sans-serif;" value="users" vertex="1">
+          <mxGeometry height="225" width="330" x="60" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="erd_users_body" parent="erd_users" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=top;spacingLeft=12;spacingRight=12;spacingTop=8;spacingBottom=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#0F172A;fontSize=13.5;fontFamily=Consolas,monospace;" value="&lt;b style=&quot;color:#2563EB;&quot;&gt;PK&lt;/b&gt; id : bigint&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;name : varchar(255)&lt;br/&gt;&lt;b style=&quot;color:#D97706;&quot;&gt;UQ&lt;/b&gt; email : varchar(255)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;password : varchar(255)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;remember_token : varchar(100)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;created_at : timestamp&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;updated_at : timestamp" vertex="1">
+          <mxGeometry height="191" width="330" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="erd_m_roles" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=34;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;fillColor=#D97706;fontColor=#FFFFFF;strokeColor=#B45309;strokeWidth=2;fontSize=15;fontFamily=sans-serif;" value="model_has_roles" vertex="1">
+          <mxGeometry height="135" width="330" x="60" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="erd_m_roles_body" parent="erd_m_roles" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=top;spacingLeft=12;spacingRight=12;spacingTop=8;spacingBottom=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#0F172A;fontSize=13.5;fontFamily=Consolas,monospace;" value="&lt;b style=&quot;color:#16A34A;&quot;&gt;FK&lt;/b&gt; role_id : bigint&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;model_type : varchar(255)&lt;br/&gt;&lt;b style=&quot;color:#16A34A;&quot;&gt;FK&lt;/b&gt; model_id : bigint" vertex="1">
+          <mxGeometry height="101" width="330" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="erd_roles" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=34;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;fillColor=#D97706;fontColor=#FFFFFF;strokeColor=#B45309;strokeWidth=2;fontSize=15;fontFamily=sans-serif;" value="roles (Spatie)" vertex="1">
+          <mxGeometry height="180" width="330" x="60" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="erd_roles_body" parent="erd_roles" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=top;spacingLeft=12;spacingRight=12;spacingTop=8;spacingBottom=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#0F172A;fontSize=13.5;fontFamily=Consolas,monospace;" value="&lt;b style=&quot;color:#2563EB;&quot;&gt;PK&lt;/b&gt; id : bigint&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;name : varchar(255)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;guard_name : varchar(255)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;created_at : timestamp&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;updated_at : timestamp" vertex="1">
+          <mxGeometry height="146" width="330" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="erd_employees" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=34;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;fillColor=#16A34A;fontColor=#FFFFFF;strokeColor=#15803D;strokeWidth=2;fontSize=15;fontFamily=sans-serif;" value="employees" vertex="1">
+          <mxGeometry height="265" width="340" x="450" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="erd_employees_body" parent="erd_employees" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=top;spacingLeft=12;spacingRight=12;spacingTop=8;spacingBottom=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#0F172A;fontSize=13.5;fontFamily=Consolas,monospace;" value="&lt;b style=&quot;color:#2563EB;&quot;&gt;PK&lt;/b&gt; id : bigint&lt;br/&gt;&lt;b style=&quot;color:#16A34A;&quot;&gt;FK&lt;/b&gt; user_id : bigint&lt;br/&gt;&lt;b style=&quot;color:#16A34A;&quot;&gt;FK&lt;/b&gt; division_id : bigint&lt;br/&gt;&lt;b style=&quot;color:#D97706;&quot;&gt;UQ&lt;/b&gt; nik : varchar(50)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;full_name : varchar(255)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;phone : varchar(50)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;position : varchar(100)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;created_at : timestamp&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;updated_at : timestamp" vertex="1">
+          <mxGeometry height="231" width="340" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="erd_divisions" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=34;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;fillColor=#EA580C;fontColor=#FFFFFF;strokeColor=#C2410C;strokeWidth=2;fontSize=15;fontFamily=sans-serif;" value="divisions" vertex="1">
+          <mxGeometry height="175" width="340" x="450" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="erd_divisions_body" parent="erd_divisions" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=top;spacingLeft=12;spacingRight=12;spacingTop=8;spacingBottom=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#0F172A;fontSize=13.5;fontFamily=Consolas,monospace;" value="&lt;b style=&quot;color:#2563EB;&quot;&gt;PK&lt;/b&gt; id : bigint&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;name : varchar(255)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;description : text&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;created_at : timestamp&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;updated_at : timestamp" vertex="1">
+          <mxGeometry height="141" width="340" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="erd_tasks" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=34;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;fillColor=#1D4ED8;fontColor=#FFFFFF;strokeColor=#1E40AF;strokeWidth=2;fontSize=15;fontFamily=sans-serif;" value="tasks" vertex="1">
+          <mxGeometry height="290" width="380" x="860" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="erd_tasks_body" parent="erd_tasks" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=top;spacingLeft=12;spacingRight=12;spacingTop=8;spacingBottom=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#0F172A;fontSize=13.5;fontFamily=Consolas,monospace;" value="&lt;b style=&quot;color:#2563EB;&quot;&gt;PK&lt;/b&gt; id : bigint&lt;br/&gt;&lt;b style=&quot;color:#16A34A;&quot;&gt;FK&lt;/b&gt; created_by_manager_id : bigint&lt;br/&gt;&lt;b style=&quot;color:#16A34A;&quot;&gt;FK&lt;/b&gt; assigned_employee_id : bigint&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;title : varchar(255)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;description : text&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;deadline : datetime&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;weight : int&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;status : enum(PENDING..COMPLETED)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;created_at : timestamp&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;updated_at : timestamp" vertex="1">
+          <mxGeometry height="256" width="380" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="erd_kpi" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=34;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;fillColor=#9333EA;fontColor=#FFFFFF;strokeColor=#7E22CE;strokeWidth=2;fontSize=15;fontFamily=sans-serif;" value="kpi_criteria" vertex="1">
+          <mxGeometry height="200" width="380" x="860" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="erd_kpi_body" parent="erd_kpi" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=top;spacingLeft=12;spacingRight=12;spacingTop=8;spacingBottom=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#0F172A;fontSize=13.5;fontFamily=Consolas,monospace;" value="&lt;b style=&quot;color:#2563EB;&quot;&gt;PK&lt;/b&gt; id : bigint&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;criteria_name : varchar(255)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;weight_percentage : decimal(5,2)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;description : text&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;created_at : timestamp&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;updated_at : timestamp" vertex="1">
+          <mxGeometry height="166" width="380" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="erd_act" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=34;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;fillColor=#475569;fontColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;fontSize=15;fontFamily=sans-serif;" value="activity_log (Audit Trail)" vertex="1">
+          <mxGeometry height="265" width="380" x="860" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="erd_act_body" parent="erd_act" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=top;spacingLeft=12;spacingRight=12;spacingTop=8;spacingBottom=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#0F172A;fontSize=13.5;fontFamily=Consolas,monospace;" value="&lt;b style=&quot;color:#2563EB;&quot;&gt;PK&lt;/b&gt; id : bigint&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;log_name : varchar(255)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;description : text&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;subject_type : varchar(255)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;subject_id : bigint&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;causer_type : varchar(255)&lt;br/&gt;&lt;b style=&quot;color:#16A34A;&quot;&gt;FK&lt;/b&gt; causer_id : bigint&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;properties : json&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;created_at : timestamp" vertex="1">
+          <mxGeometry height="231" width="380" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="erd_sub" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=34;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;fillColor=#DB2777;fontColor=#FFFFFF;strokeColor=#BE185D;strokeWidth=2;fontSize=15;fontFamily=sans-serif;" value="task_submissions" vertex="1">
+          <mxGeometry height="245" width="360" x="1310" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="erd_sub_body" parent="erd_sub" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=top;spacingLeft=12;spacingRight=12;spacingTop=8;spacingBottom=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#0F172A;fontSize=13.5;fontFamily=Consolas,monospace;" value="&lt;b style=&quot;color:#2563EB;&quot;&gt;PK&lt;/b&gt; id : bigint&lt;br/&gt;&lt;b style=&quot;color:#16A34A;&quot;&gt;FK&lt;/b&gt; task_id : bigint&lt;br/&gt;&lt;b style=&quot;color:#16A34A;&quot;&gt;FK&lt;/b&gt; employee_id : bigint&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;file_path : varchar(255)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;notes : text&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;submitted_at : timestamp&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;created_at : timestamp&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;updated_at : timestamp" vertex="1">
+          <mxGeometry height="211" width="360" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="erd_eval" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=34;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;fillColor=#0D9488;fontColor=#FFFFFF;strokeColor=#0F766E;strokeWidth=2;fontSize=15;fontFamily=sans-serif;" value="performance_evaluations" vertex="1">
+          <mxGeometry height="290" width="380" x="1310" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="erd_eval_body" parent="erd_eval" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=top;spacingLeft=12;spacingRight=12;spacingTop=8;spacingBottom=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#0F172A;fontSize=13.5;fontFamily=Consolas,monospace;" value="&lt;b style=&quot;color:#2563EB;&quot;&gt;PK&lt;/b&gt; id : bigint&lt;br/&gt;&lt;b style=&quot;color:#16A34A;&quot;&gt;FK&lt;/b&gt; task_id : bigint&lt;br/&gt;&lt;b style=&quot;color:#16A34A;&quot;&gt;FK&lt;/b&gt; employee_id : bigint&lt;br/&gt;&lt;b style=&quot;color:#16A34A;&quot;&gt;FK&lt;/b&gt; evaluator_manager_id : bigint&lt;br/&gt;&lt;b style=&quot;color:#16A34A;&quot;&gt;FK&lt;/b&gt; kpi_criteria_id : bigint&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;score : decimal(5,2)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;feedback_notes : text&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;evaluated_at : timestamp&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;created_at : timestamp&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;updated_at : timestamp" vertex="1">
+          <mxGeometry height="256" width="380" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_u_e" edge="1" parent="1" source="erd_users" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=ERone;endFill=0;startArrow=ERone;startFill=0;strokeColor=#2563EB;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#1E293B;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="erd_employees" value="1 : 1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_u_m_roles" edge="1" parent="1" source="erd_users" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=ERoneToMany;endFill=0;startArrow=ERone;startFill=0;strokeColor=#2563EB;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#1E293B;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="erd_m_roles" value="1 : N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_r_m_roles" edge="1" parent="1" source="erd_roles" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=ERoneToMany;endFill=0;startArrow=ERone;startFill=0;strokeColor=#D97706;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#1E293B;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" target="erd_m_roles" value="1 : N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_d_e" edge="1" parent="1" source="erd_divisions" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=ERoneToMany;endFill=0;startArrow=ERone;startFill=0;strokeColor=#EA580C;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#1E293B;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" target="erd_employees" value="1 : N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_e_t_mgr" edge="1" parent="1" source="erd_employees" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=ERoneToMany;endFill=0;startArrow=ERone;startFill=0;strokeColor=#16A34A;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#1E293B;exitX=1;exitY=0.25;entryX=0;entryY=0.25;" target="erd_tasks" value="1 : N (created_by)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_e_t_assign" edge="1" parent="1" source="erd_employees" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=ERoneToMany;endFill=0;startArrow=ERone;startFill=0;strokeColor=#16A34A;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#1E293B;exitX=1;exitY=0.75;entryX=0;entryY=0.75;" target="erd_tasks" value="1 : N (assigned_to)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_t_sub" edge="1" parent="1" source="erd_tasks" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=ERoneToMany;endFill=0;startArrow=ERone;startFill=0;strokeColor=#1D4ED8;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#1E293B;exitX=1;exitY=0.45;entryX=0;entryY=0.45;" target="erd_sub" value="1 : N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_t_eval" edge="1" parent="1" source="erd_tasks" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=ERoneToMany;endFill=0;startArrow=ERone;startFill=0;strokeColor=#1D4ED8;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#1E293B;exitX=1;exitY=0.8;entryX=0;entryY=0.3;" target="erd_eval" value="1 : N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_kpi_eval" edge="1" parent="1" source="erd_kpi" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=ERoneToMany;endFill=0;startArrow=ERone;startFill=0;strokeColor=#9333EA;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#1E293B;exitX=1;exitY=0.5;entryX=0;entryY=0.75;" target="erd_eval" value="1 : N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
     </mxGraphModel>
   </diagram>
   <diagram id="euc-uc01" name="32. EUC - UC-01 Login">
