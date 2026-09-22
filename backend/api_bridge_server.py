@@ -35,9 +35,13 @@ class APIBridgeHandler(SimpleHTTPRequestHandler):
         
         try:
             # Extract path without query string
-            path = self.path.split('?')[0]
+            path = self.path.split('?')[0].lower()
             
-            if '/api/v1/employees' in path or '/api/v1/get-employees' in path:
+            # Handle auth/me endpoint (authentication check)
+            if '/auth/me' in path:
+                response = self.auth_me()
+            
+            elif '/api/v1/employees' in path or '/api/v1/get-employees' in path:
                 response = self.get_employees()
             elif '/api/v1/dashboard/stats' in path or '/dashboard-stats' in path:
                 response = self.get_dashboard_stats()
@@ -62,6 +66,21 @@ class APIBridgeHandler(SimpleHTTPRequestHandler):
                 'path': path if 'path' in locals() else 'unknown'
             }).encode())
     
+    def auth_me(self):
+        """Handle /api/v1/auth/me endpoint for authentication status"""
+        return {
+            'success': True,
+            'data': {
+                'id': 1,
+                'name': 'Admin System',
+                'email': 'admin@gmail.com',
+                'role': 'ADMIN',
+                'status': 'active',
+                'email_verified_at': None
+            },
+            'message': 'Authenticated successfully'
+        }
+
     def do_POST(self):
         """Handle POST requests - simulate feature extraction"""
         
