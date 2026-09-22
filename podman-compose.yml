@@ -1,0 +1,160 @@
+version: '3.8'
+
+services:
+  # 1. Database PostgreSQL
+  postgres:
+    image: docker.io/library/postgres:16-alpine
+    container_name: simkap_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: sim_kinerja
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgrespassword
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # 2. Redis Cache & Queue
+  redis:
+    image: docker.io/library/redis:alpine
+    container_name: simkap_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # 3. Backend Laravel (API Server)
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: simkap_backend
+    restart: unless-stopped
+    ports:
+      - "0.0.0.0:8000:8000"
+    environment:
+      DB_CONNECTION: pgsql
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_DATABASE: sim_kinerja
+      DB_USERNAME: postgres
+      DB_PASSWORD: postgrespassword
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      CACHE_STORE: redis
+      QUEUE_CONNECTION: redis
+      APP_DEBUG: true
+    volumes:
+      - ./backend:/var/www
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # 4. Queue Worker (Background processing)
+  queue_worker:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: simkap_queue_worker
+    restart: unless-stopped
+    command: php artisan queue:work --tries=3 --timeout=90
+    environment:
+      DB_CONNECTION: pgsql
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_DATABASE: sim_kinerja
+      DB_USERNAME: postgres
+      DB_PASSWORD: postgrespassword
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      CACHE_STORE: redis
+      QUEUE_CONNECTION: redis
+    volumes:
+      - ./backend:/var/www
+    depends_on:
+      - backend
+
+  # 5. Frontend Next.js (Development)
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    container_name: simkap_frontend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8000/api/v1
+      WATCHPACK_POLLING: "true"
+      CHOKIDAR_USEPOLLING: "true"
+      NEXT_TELEMETRY_DISABLED: "1"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+
+  # 6. Machine Learning Python Service
+  ml-python:
+    image: docker.io/library/python:3.11-slim
+    container_name: simkap_ml_python
+    restart: unless-stopped
+    working_dir: /app/backend/python
+    volumes:
+      - ./backend:/app/backend
+      - ml_python_venv:/app/backend/python/venv
+    environment:
+      PYTHONUNBUFFERED: "1"
+      PYTHONPATH: "/app/backend"
+      ML_SERVICE_URL: "http://backend:8000/api/v1"
+    command: >
+      bash -c "
+        apt-get update && apt-get install -y --no-install-recommends gcc g++ make python3-dev &&
+        python3 -m venv /app/backend/python/venv &&
+        /app/backend/python/venv/bin/pip install --upgrade pip &&
+        /app/backend/python/venv/bin/pip install scikit-learn numpy pandas scipy joblib &&
+        echo '=== ML Python Service Ready ===' &&
+        tail -f /dev/null
+      "
+    healthcheck:
+      test: ["CMD", "/app/backend/python/venv/bin/python", "--version"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 120s
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 2G
+
+networks:
+  default:
+    name: simkap_network
+    driver: bridge
+
+volumes:
+  postgres_data:
+  redis_data:
+  ml_python_venv:

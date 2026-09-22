@@ -1,5 +1,3 @@
-<?php
-
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\V1\AuthController;
 use App\Http\Controllers\Api\V1\TaskController;
@@ -10,6 +8,7 @@ use App\Http\Controllers\Api\V1\EvaluationController;
 use App\Http\Controllers\Api\V1\RoleController;
 use App\Http\Controllers\Api\V1\PermissionController;
 use App\Http\Controllers\Api\V1\AuditLogController;
+use App\Http\Controllers\Api\V1\MlClusteringController;
 
 Route::prefix('v1')->group(function () {
 
@@ -47,5 +46,14 @@ Route::prefix('v1')->group(function () {
 
         // Audit Logs (Aman dengan Controller & Middleware Permission)
         Route::get('/activity-logs', [AuditLogController::class, 'index'])->middleware('permission:activity-log.view');
+
+        // ==========================================
+        // Machine Learning Clustering
+        // ==========================================
+        Route::prefix('ml')->group(function () {
+            Route::post('/extract-features', [MlClusteringController::class, 'extractFeatures']);
+            Route::post('/run-clustering', [MlClusteringController::class, 'runClustering']);
+            Route::get('/clusters/{period}', [MlClusteringController::class, 'getClusters']);
+        });
     });
 });

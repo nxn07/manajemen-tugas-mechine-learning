@@ -1,0 +1,101 @@
+========================================================
+🔍 CARA LANGSUNG CEK 33 EMPLOYEE ADA TIDAK!
+========================================================
+
+METODE 1: Cek Melalui Laravel Tinker
+-------------------------------------
+
+Buka WSL terminal dan jalankan command ini:
+
+podman exec -it simkap_backend php artisan tinker
+
+Kemudian ketik command ini:
+
+>>> echo "Total Employees: " . DB::table('employees')->count();
+
+Output yang HARUSNYa muncul:
+Total Employees: 33
+
+Jika output berbeda atau error, berarti belum ada employee.
+
+========================================================
+
+METODE 2: Cek Melalui Database Direct Query
+--------------------------------------------
+
+podman exec -it simkap_postgres psql -U postgres -d sim_kinerja
+
+Di PostgreSQL prompt, ketik:
+
+SELECT COUNT(*) as total FROM employees;
+
+Output yang diharapkan:
+ count 
+-------
+    33
+(1 row)
+
+========================================================
+
+METODE 3: Cek Melalui API Endpoint
+-----------------------------------
+
+Curl command:
+
+curl http://localhost:8000/api/v1/users?page=1&per_page=1
+
+Atau buka browser:
+http://localhost:8000/api/v1/users?page=1&per_page=1
+
+JSON response yang diharapkan:
+{
+  "data": [...],
+  "meta": {
+    "total": 33,  <-- INI YANG PERLU DICEK!
+    ...
+  }
+}
+
+========================================================
+
+METODE 4: Cek Langsung dari Frontend
+-------------------------------------
+
+1. Buka browser: http://localhost:3000/users
+2. Lihat badge pojok kanan atas
+3. Harus bertuliskan: "Total 33 Users"
+
+Atau cek Network tab di browser DevTools (F12):
+- Filter XHR requests
+- Klik request ke /users
+- Tab Response harus menampilkan JSON dengan data 33 user
+
+========================================================
+
+KALAU BELUM ADA DATA - JALANKAN SEEDER SEKARANG!
+-------------------------------------------------
+
+./run-seed-employees.sh
+
+Atau manually:
+
+podman exec -it simkap_backend \
+  php artisan db:seed --class=EmployeesWithMlFeaturesSeeder
+
+Setelah seeding selesai, cek lagi:
+podman exec -it simkap_backend php artisan tinker --execute="echo DB::table('employees')->count();"
+
+Should return: 33
+
+========================================================
+
+CEK DATA ML FEATURES JUGA:
+--------------------------
+
+Setelah ada employee, cek apakah sudah ada ML features:
+
+podman exec -it simkap_backend php artisan tinker --execute="echo 'ML Features: ' . DB::table('ml_employee_feature_data')->count();"
+
+If 33 = YES, ready for clustering!
+
+========================================================

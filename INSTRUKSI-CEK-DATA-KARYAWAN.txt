@@ -1,0 +1,165 @@
+====================================================
+🚀 LANGKAH LENGKAP UNTUK CEK & AMPILKAN 33 KARYAWAN
+====================================================
+
+STEP 1: BUKA WSL TERMINAL
+--------------------------
+Buka terminal Linux (WSL) di Windows Anda
+Position ke folder project:
+
+cd /mnt/c/Users/Microsoft/Documents/Ngoding/KP
+
+STEP 2: CEK STATUS CONTAINERS
+------------------------------
+Jalankan command ini:
+
+podman ps --format "{{.Names}} | {{.Status}}"
+
+YANG HARUS MUNCUL:
+simkap_backend   | Up ...
+simkap_frontend  | Up ...
+simkap_postgres  | Up (healthy)
+simkap_redis     | Up (healthy)
+
+Jika backend TIDAK ada atau status bukan "Up":
+Start lagi:
+
+podman-compose up -d
+
+
+STEP 3: CEK JUMLAH EMPLOYEE DI DATABASE
+-----------------------------------------
+Jalankan command ini untuk cek jumlah real:
+
+podman exec -it simkap_backend php artisan tinker --execute="echo DB::table('employees')->count();"
+
+HASIL YANG DIIHARAPKAN:
+✅ "33" → Sudah ada 33 employee!
+
+❌ "0" → BELUM ADA DATA
+⚠️ "Error" → Container tidak ready
+
+
+STEP 4: JIKA ZERO - SEED DATA SEKARANG
+----------------------------------------
+Jalankan command ini:
+
+./run-seed-employees.sh
+
+Tunggu sampai muncul message:
+
+"✅ Seeding completed successfully!"
+"Total employees created: 33"
+
+
+STEP 5: VERIFIKASI HASIL
+-------------------------
+Setelah seeding selesai, cek lagi:
+
+# Method A: Laravel Tinker
+podman exec -it simkap_backend php artisan tinker --execute="echo 'Total: ' . DB::table('employees')->count();"
+
+Expected: Total: 33
+
+# Method B: Direct SQL
+podman exec -it simkap_postgres psql -U postgres -d sim_kinerja \
+  -c "SELECT COUNT(*) as total FROM employees;"
+
+Expected: count = 33
+
+# Method C: API Test
+curl http://localhost:8000/api/v1/users?page=1&per_page=1 | jq '.meta.total'
+
+Expected: 33
+
+
+STEP 6: TEST FRONTEND
+---------------------
+Buka browser:
+http://localhost:3000/users
+
+Harusnya muncul:
+✅ Badge pojok kanan: "Total 33 Users"
+✅ Table menampilkan semua employee
+✅ Data lengkap dengan name, email, position, division
+
+Atau test ML Clustering:
+http://localhost:3000/ml-clustering
+
+Harusnya:
+✅ Top-left card: "Total Karyawan: 33"
+
+
+====================================================
+🔍 TROUBLESHOOTING - JIKA MASIH Bermasalah
+====================================================
+
+MASALAH 1: Backend masih "starting" lama
+-----------------------------------------
+Command restart:
+
+podman-compose restart backend
+sleep 10
+podman ps | grep backend
+
+Should show: Up (healthy)
+
+
+MASALAH 2: Frontend masih 0 users
+-----------------------------------
+Clear cache browser:
+Ctrl + Shift + R
+
+Restart frontend:
+podman-compose restart frontend
+
+
+MASALAH 3: CORS Error di Console (F12)
+---------------------------------------
+Cek file CORS:
+
+cat backend/config/cors.php
+
+Harus ada:
+'allowed_origins' => ['http://localhost:3000'],
+
+
+MASALAH 4: Database connection error
+-------------------------------------
+Check logs:
+
+podman logs simkap_backend --tail 50
+
+Look for connection refused errors
+If found, check PostgreSQL running:
+
+podman ps | grep postgres
+
+
+MASALAH 5: API returns 401 Unauthorized
+----------------------------------------
+Login ulang:
+Logout button → Login again
+Or clear token:
+
+localStorage.clear()
+location.reload()
+
+
+====================================================
+✅ CHECKLIST FINAL
+====================================================
+
+Run these commands and check each item:
+
+□ podman ps shows all containers UP
+□ Backend shows Up (healthy)
+□ Employee count from DB is 33
+□ API endpoint returns JSON with total: 33
+□ Frontend page http://localhost:3000/users displays 33 users
+□ No console errors (F12)
+□ Network tab shows 200 OK response
+
+If ALL ✅, maka SUKSES! 🎉
+
+====================================================

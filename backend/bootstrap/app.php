@@ -17,6 +17,12 @@ return Application::configure(basePath: dirname(__DIR__))
             'permission'         => \Spatie\Permission\Middleware\PermissionMiddleware::class,
             'role_or_permission' => \Spatie\Permission\Middleware\RoleOrPermissionMiddleware::class,
         ]);
+        
+        // Add CORS middleware to web group
+        $middleware->web(append: [
+            \App\Http\Middleware\CORSMiddleware::class,
+            \App\Http\Middleware\RequestTiming::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

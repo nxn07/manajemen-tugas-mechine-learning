@@ -1,0 +1,94 @@
+====================================================
+📝 INSTRUCTIONS - Restart Podman Containers
+====================================================
+
+Buka WSL terminal Anda di folder /mnt/c/Users/Microsoft/Documents/Ngoding/KP
+
+Jalankan command ini:
+----------------------
+
+# Option 1: Manual Commands (Recommended)
+cd /mnt/c/Users/Microsoft/Documents/Ngoding/KP
+
+# Stop all containers
+podman-compose down
+
+# Remove old containers
+podman rm simkap_* 2>/dev/null || true
+
+# Start fresh
+podman-compose up -d
+
+# Wait for health check
+sleep 30
+
+# Re-apply caches
+podman exec simkap_backend php artisan config:cache
+podman exec simkap_backend php artisan route:cache
+
+# Check status
+podman ps --format "{{.Names}} | {{.Status}}"
+
+-----------------------------------------------------
+
+# Option 2: One-Liner Command
+podman-compose down && podman rm -f simkap_* && sleep 5 && podman-compose up -d && sleep 20 && podman exec simkap_backend php artisan config:cache && podman exec simkap_backend php artisan route:cache && podman ps
+
+-----------------------------------------------------
+
+# Option 3: Use Script (if created)
+chmod +x RESTART-ALL-PODMAN-COMMANDS.sh
+./RESTART-ALL-PODMAN-COMMANDS.sh
+
+-----------------------------------------------------
+
+Expected Timeline:
+------------------
+0-5 sec:   Stop containers
+5-10 sec:  Clean old containers  
+10-20 sec: Start new containers
+20-30 sec: Health checks pass
+30-35 sec: Cache files created
+35-40 sec: Ready! ✨
+
+Total Time: ~40 seconds
+
+-----------------------------------------------------
+
+What Will Happen:
+-----------------
+✅ All containers will be stopped cleanly
+✅ Old container instances removed
+✅ Fresh containers started with optimizations
+✅ Configuration cache applied (instant loading)
+✅ Route cache applied (fast routing)
+✅ Redis queue ready (async jobs)
+✅ Optimized performance ready
+
+-----------------------------------------------------
+
+Verify After Restart:
+--------------------
+Test URL: http://localhost:8000/api/v1/health
+Expected: {"status":"ok", ...}
+
+Test Frontend: http://localhost:3000/users
+Should load much faster now! ⚡
+
+-----------------------------------------------------
+
+Troubleshooting:
+---------------
+If containers don't start:
+  $ CMD logs simkap_backend --tail 50
+  
+If cache fails:
+  $ CMD exec simkap_backend php artisan optimize:clear
+  Then re-run: php artisan config:cache
+  
+If database issue:
+  $ CMD exec simkap_backend php artisan db:connection --force
+
+====================================================
+
+Good luck! 🚀

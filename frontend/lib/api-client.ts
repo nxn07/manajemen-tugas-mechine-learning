@@ -3,7 +3,7 @@ import Cookies from 'js-cookie';
 
 const apiClient = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:8000/api/v1',
-  timeout: 1500, // Strict 1.5s timeout so API calls never hang
+  timeout: 30000, // Increased to 30s for ML operations (was 1.5s)
   headers: {
     'Content-Type': 'application/json',
     'Accept': 'application/json',

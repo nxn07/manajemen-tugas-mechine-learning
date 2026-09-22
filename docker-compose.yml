@@ -45,11 +45,13 @@ services:
       REDIS_PORT: 6379
       CACHE_STORE: redis
       QUEUE_CONNECTION: redis
+      ML_PYTHON_URL: ml-python:8000
     volumes:
       - ./backend:/var/www
     depends_on:
       - postgres
       - redis
+      - ml-python
 
   # 4. Queue Worker (Otomatis memproses antrean di background)
   queue_worker:
@@ -76,6 +78,7 @@ services:
       - backend
       - redis
       - postgres
+      - ml-python
 
   # 5. Frontend Next.js (Fast Refresh & Polling Activated for Instant Ctrl+R)
   frontend:
@@ -97,6 +100,50 @@ services:
     depends_on:
       - backend
 
+  # 6. Machine Learning Python Service (K-Means Clustering)
+  ml-python:
+    image: python:3.11-slim
+    container_name: simkap_ml_python
+    restart: always
+    working_dir: /app/backend/python
+    volumes:
+      - ./backend:/app/backend
+      - ml_python_venv:/app/backend/python/venv
+    environment:
+      PYTHONUNBUFFERED: "1"
+      PYTHONPATH: "/app/backend"
+      ML_SERVICE_URL: "http://backend:8000/api/v1"
+    command: >
+      bash -c "
+        apt-get update && apt-get install -y --no-install-recommends gcc g++ make python3-dev &&
+        python3 -m venv /app/backend/python/venv &&
+        /app/backend/python/venv/bin/pip install --upgrade pip &&
+        /app/backend/python/venv/bin/pip install scikit-learn numpy pandas scipy joblib &&
+        echo '=== ML Python Service Ready ===' &&
+        echo 'Python version:' && /app/backend/python/venv/bin/python --version &&
+        echo 'Installed packages:' && /app/backend/python/venv/bin/pip freeze | grep -E 'scikit-learn|numpy|pandas|scipy' &&
+        echo 'Service running in background, ready for ML operations...' &&
+        echo 'Maximum execution time: 300 seconds (5 minutes)' &&
+        ulimit -t 300 &&
+        tail -f /dev/null
+      "
+    healthcheck:
+      test: ["CMD-SHELL", "/app/backend/python/venv/bin/python --version"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 2G
+
+networks:
+  simkap_network:
+    driver: bridge
+
 volumes:
   postgres_data:
   redis_data:
+  ml_python_venv:
