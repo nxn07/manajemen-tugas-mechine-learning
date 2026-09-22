@@ -97,8 +97,7 @@ export default function ActivityLogsPage() {
 
     const interval = setInterval(() => {
       loadAuditLogs();
-    }, 3000);
-
+    }, 60000); // Reduced from 3s to 60s for performance
     return () => {
       clearTimeout(readTimer);
       clearInterval(interval);

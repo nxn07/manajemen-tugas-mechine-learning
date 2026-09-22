@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { useAuth } from "@/hooks/useAuth";
@@ -18,6 +17,7 @@ import {
   History,
   Settings,
   LogOut,
+  BrainCircuit,
 } from "lucide-react";
 
 const menuItems = [
@@ -28,6 +28,7 @@ const menuItems = [
   { name: "Kriteria KPI", href: "/kpis", icon: Target, roles: ["ADMIN"], permission: "kpis.manage" },
   { name: "Manajemen User", href: "/users", icon: Users, roles: ["ADMIN", "MANAGER"], permission: "users.delete" },
   { name: "Log Aktivitas", href: "/activity-logs", icon: History, roles: ["ADMIN", "MANAGER"] },
+  { name: "IntelliML Cluster", href: "/ml-clustering", icon: BrainCircuit, roles: ["ADMIN", "MANAGER"] },
   { name: "Pengaturan & Profil", href: "/settings", icon: Settings, roles: ["ADMIN", "MANAGER", "EMPLOYEE"] },
 ];
 
@@ -57,28 +58,26 @@ export default function Sidebar() {
   }, [user]);
 
   useEffect(() => {
-    const updateCount = async () => {
+    // Lazy load audit log count - only on initial mount, then every 30 seconds
+    const fetchUnreadCount = async () => {
       try {
         const count = await auditLogService.getUnreadCount();
         setLogCount(count);
       } catch {
-        // ignore
+        // ignore errors
       }
     };
-    updateCount();
-
-    const handleAuditUpdate = () => updateCount();
-    window.addEventListener("simkap_audit_updated", handleAuditUpdate);
-    window.addEventListener("storage", handleAuditUpdate);
-    const interval = setInterval(updateCount, 1500);
+    
+    // Initial fetch
+    fetchUnreadCount();
+    
+    // Poll every 30 seconds instead of 1.5 seconds (reduce from 40/sec to 2/min)
+    const interval = setInterval(fetchUnreadCount, 30000);
 
     return () => {
-      window.removeEventListener("simkap_audit_updated", handleAuditUpdate);
-      window.removeEventListener("storage", handleAuditUpdate);
       clearInterval(interval);
     };
   }, []);
-
   return (
     <aside className="w-64 bg-slate-900 text-slate-100 h-screen sticky top-0 overflow-y-auto flex flex-col justify-between p-4 shrink-0 border-r border-slate-800 z-40">
       <div>

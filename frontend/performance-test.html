@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Test - SIM Kinerja</title>
+    <style>
+        body { font-family: system-ui; max-width: 800px; margin: 50px auto; padding: 20px; }
+        .metric { background: #f0f9ff; padding: 15px; margin: 10px 0; border-radius: 8px; border-left: 4px solid #0369a1; }
+        .pass { border-left-color: #10b981; background: #ecfdf5; }
+        .fail { border-left-color: #ef4444; background: #fef2f2; }
+        .warn { border-left-color: #f59e0b; background: #fffbeb; }
+        h1 { color: #1e293b; }
+        code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>🚀 SIM Kinerja Dashboard Performance Test</h1>
+    <p><strong>Target:</strong> All menus should load in < 1 second after navigation</p>
+    
+    <div id="results"></div>
+    
+    <script>
+        const metrics = {
+            navTimes: new Map(),
+            apiCalls: [],
+            memoryUsage: []
+        };
+
+        // Track navigation
+        async function testNavigation() {
+            const menuItems = [
+                '/divisions', 
+                '/kpis', 
+                '/tasks', 
+                '/evaluations'
+            ];
+
+            console.log('Starting navigation test...');
+            
+            for (const path of menuItems) {
+                const start = performance.now();
+                
+                try {
+                    // Navigate to each page
+                    await fetch(path);
+                    
+                    const end = performance.now();
+                    const duration = end - start;
+                    metrics.navTimes.set(path, duration);
+                    
+                    console.log(`✅ ${path}: ${duration.toFixed(0)}ms`);
+                    
+                    if (duration > 1000) {
+                        console.warn(`⚠️  Slow navigation on ${path}`);
+                    }
+                } catch (error) {
+                    console.error(`❌ Failed to navigate to ${path}:`, error);
+                }
+            }
+            
+            displayResults();
+        }
+
+        function displayResults() {
+            let html = '<h2>Navigation Performance</h2>';
+            
+            let allPass = true;
+            metrics.navTimes.forEach((time, path) => {
+                const status = time < 500 ? 'pass' : time < 1000 ? 'warn' : 'fail';
+                html += `
+                    <div class="metric ${status}">
+                        <strong>${path}</strong>: <code>${time.toFixed(0)}ms</code>
+                        ${time >= 500 ? ' ⚠️  Should be faster!' : ''}
+                    </div>
+                `;
+                if (time > 1000) allPass = false;
+            });
+            
+            html += `<h2>Recommendations</h2>`;
+            
+            if (allPass) {
+                html += '<div class="metric pass"><strong>✅ Good! Navigation is fast.</strong></div>';
+            } else {
+                html += `
+                    <div class="metric warn">
+                        <strong>⚠️  Performance Issues Found:</strong><br>
+                        • Check audit log polling interval<br>
+                        • Enable lazy loading for images<br>
+                        • Add React Suspense boundaries<br>
+                        • Implement code splitting<br>
+                        • Consider Redis caching for static data
+                    </div>
+                `;
+            }
+            
+            document.getElementById('results').innerHTML = html;
+        }
+
+        // Run test after DOM ready
+        window.addEventListener('load', () => {
+            setTimeout(testNavigation, 1000);
+        });
+    </script>
+</body>
+</html>
