@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS / Editor temporary files
+.DS_Store
+Thumbs.db
+*.bak
+*.swp
+
+# Logs
+*.log
