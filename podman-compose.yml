@@ -99,7 +99,7 @@ services:
   frontend:
     build:
       context: ./frontend
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     container_name: simkap_frontend
     restart: unless-stopped
     ports:
@@ -115,18 +115,19 @@ services:
     depends_on:
       - backend
 
-  # 6. Machine Learning Python Service
+  # 6. Machine Learning Python Service (Dedicated & Separated)
   ml-python:
     image: docker.io/library/python:3.11-slim
     container_name: simkap_ml_python
     restart: unless-stopped
-    working_dir: /app/backend/python
+    working_dir: /app
     volumes:
+      - ./machine_learning:/app/machine_learning
       - ./backend:/app/backend
       - ml_python_venv:/app/backend/python/venv
     environment:
       PYTHONUNBUFFERED: "1"
-      PYTHONPATH: "/app/backend"
+      PYTHONPATH: "/app:/app/machine_learning:/app/backend"
       ML_SERVICE_URL: "http://backend:8000/api/v1"
     command: >
       bash -c "
