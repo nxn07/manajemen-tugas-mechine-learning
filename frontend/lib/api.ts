@@ -1,4 +1,5 @@
 import axios, { AxiosError, InternalAxiosRequestConfig } from "axios";
+import Cookies from "js-cookie";
 
 const api = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api/v1",
@@ -21,7 +22,11 @@ const api = axios.create({
 api.interceptors.request.use(
   async (config: InternalAxiosRequestConfig) => {
     if (typeof window !== "undefined") {
-      const token = localStorage.getItem("token") || localStorage.getItem("access_token");
+      const token =
+        Cookies.get("simkap_token") ||
+        localStorage.getItem("token") ||
+        localStorage.getItem("access_token") ||
+        localStorage.getItem("simkap_token");
       if (token && config.headers) {
         config.headers.Authorization = `Bearer ${token}`;
       }
@@ -119,35 +124,46 @@ api.interceptors.response.use(
     } else if (err.code === "ERR_NETWORK") {
       console.warn("⚠️ Network error detected");
       
-    } else if (err.code === "ECONNABORTED" || err.message.includes("timeout")) {
-      console.warn("⚠️ Request timed out after", err.config?.timeout / 1000, "seconds");
+    } else if (err.code === "ECONNABORTED" || (err.message && err.message.includes("timeout"))) {
+      const timeoutSec = err.config?.timeout ? err.config.timeout / 1000 : 30;
+      console.warn("⚠️ Request timed out after", timeoutSec, "seconds");
       
     } else if (err.response) {
       // Server responded with error status
       console.error("⚠️ Server Error:", err.response.status, err.response.statusText);
       console.error("Response data:", err.response.data);
       
+      if (err.response.status === 401 && typeof window !== "undefined") {
+        Cookies.remove("simkap_token", { path: "/" });
+        Cookies.remove("simkap_user", { path: "/" });
+        localStorage.removeItem("token");
+        localStorage.removeItem("access_token");
+        localStorage.removeItem("simkap_token");
+        localStorage.removeItem("simkap_user");
+        if (!window.location.pathname.includes("/login")) {
+          window.location.href = "/login?expired=1";
+        }
+      }
     } else if (err.request) {
       // Request made but no response received
       console.error("❌ No response received from server");
     }
     
     // Smart retry logic
+    const config = err.config as any;
     const shouldRetry = 
-      ["ECONNREFUSED", "ERR_NETWORK", "ETIMEDOUT"].includes(err.code) ||
+      Boolean(err.code && ["ECONNREFUSED", "ERR_NETWORK", "ETIMEDOUT"].includes(err.code)) ||
       err.response?.status === 503 ||
       err.response?.status === 504;
     
-    if (shouldRetry && !err.config.__retryCount) {
-      err.config.__retryCount = 1;
+    if (shouldRetry && config && !config.__retryCount) {
+      config.__retryCount = 1;
+      const retryDelay = 2000;
       
-      const retryDelay = [1000, 2000, 5000][Math.min(err.config.__retryCount - 1, 2)];
-      
-      console.log(`🔄 Retrying ${err.config.method} ${err.config.url} in ${retryDelay}ms...`);
-      
+      console.log(`🔄 Retrying ${config.method} ${config.url} in ${retryDelay}ms...`);
       await new Promise((resolve) => setTimeout(resolve, retryDelay));
       
-      return api.request(err.config).catch((retryErr) => Promise.reject(retryErr));
+      return api.request(config).catch((retryErr) => Promise.reject(retryErr));
     }
     
     return Promise.reject(err);

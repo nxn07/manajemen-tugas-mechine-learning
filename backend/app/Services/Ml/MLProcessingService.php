@@ -42,7 +42,7 @@ class MLProcessingService
             ];
 
             $matrix[] = $row;
-            $labels[] = $feature->employee->name;
+            $labels[] = $feature->employee->full_name ?? ('Karyawan ' . $feature->employee_id);
         }
 
         // Prepare output structure with metadata
@@ -82,38 +82,30 @@ class MLProcessingService
         $inputPath = $this->prepareDataForClustering($period)['path'];
 
         // Step 2: Run Python ML processing script
-        $pythonScript = storage_path('app/python/ml_processor.py');
+        $pythonScript = base_path('python/ml_processor.py');
+        if (!file_exists($pythonScript)) {
+            $pythonScript = storage_path('app/python/ml_processor.py');
+        }
 
         if (!file_exists($pythonScript)) {
             throw new \Exception("Python ML processor script not found at: {$pythonScript}");
         }
 
-        // Check if running in Docker environment
-        $runningInDocker = getenv('DOCKER_CONTAINER') !== false || file_exists('/.dockerenv');
+        // Detect python binary
+        $pythonBin = trim(shell_exec('which python3 2>/dev/null') ?: (shell_exec('which python 2>/dev/null') ?: 'python3'));
 
-        if ($runningInDocker) {
-            // Running inside Laravel container - execute Python via docker exec
-            $pythonScriptContainerPath = '/app/backend/python/ml_processor.py';
-            $inputFileContainerPath = '/var/www/storage/app/' . basename($inputPath);
-            
-            // Use Process facade with timeout control
-            $process = Process::run([
-                'docker', 
-                'exec', 
-                'simkap_ml_python', 
-                '/app/backend/python/venv/bin/python', 
-                $pythonScriptContainerPath,
-                $inputFileContainerPath,
-                $nClusters,
-            ], [], null, null, 300); // 5 minutes timeout
+        $process = Process::timeout(120)->run([
+            $pythonBin,
+            $pythonScript,
+            $inputPath,
+            (string) $nClusters,
+        ]);
 
-            if (!$process->isSuccessful()) {
-                throw new \Exception("ML processing failed:\n{$process->stderr()}");
-            }
-            
-            // Log output for debugging
-            \Log::info('ML Processing Output:', ['output' => $process->output()]);
+        if (!$process->successful()) {
+            throw new \Exception("ML processing failed:\n" . ($process->stderr() ?: $process->output()));
         }
+        
+        \Log::info('ML Processing Output:', ['output' => $process->output()]);
 
         // Step 3: Parse results from output JSON
         $resultsPath = str_replace('.json', '_output.json', $inputPath);
@@ -141,7 +133,7 @@ class MLProcessingService
 
         // Step 5: Store employee-cluster mappings
         foreach ($results['cluster_assignments'] as $assignment) {
-            $employee = Employee::where('name', $assignment['label'])->first();
+            $employee = Employee::where('full_name', $assignment['label'])->first();
 
             if ($employee) {
                 MLEmployeeCluster::create([

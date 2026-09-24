@@ -97,5 +97,17 @@ class RoleAndPermissionSeeder extends Seeder
             'tasks.submit',
             'evaluations.view_own',
         ]);
+
+        // Assign Spatie roles to existing users
+        foreach (\App\Models\User::all() as $user) {
+            $userRoleLower = strtolower($user->role ?? '');
+            if ($userRoleLower === 'admin' || $user->email === 'admin@gmail.com') {
+                $user->syncRoles(['admin']);
+            } elseif ($userRoleLower === 'manager' || str_contains($user->email, 'manager')) {
+                $user->syncRoles(['manager']);
+            } else {
+                $user->syncRoles(['employee']);
+            }
+        }
     }
 }

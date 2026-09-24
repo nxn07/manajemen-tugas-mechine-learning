@@ -79,45 +79,63 @@ export default function Sidebar() {
       clearInterval(interval);
     };
   }, []);
+  
   return (
-    <aside className="w-64 bg-slate-900 text-slate-100 h-screen sticky top-0 overflow-y-auto flex flex-col justify-between p-4 shrink-0 border-r border-slate-800 z-40">
+    <aside className="w-64 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-slate-100 h-screen sticky top-0 overflow-y-auto flex flex-col justify-between p-4 shrink-0 border-r border-white/5 z-40">
+      {/* Modern Gradient Background */}
+      
       <div>
-        {/* Brand Header with Official Central Saga Green Logo & Name */}
-        <div className="px-3 py-4 mb-4 border-b border-slate-800 flex items-center gap-3">
-          <div className="w-11 h-11 rounded-2xl bg-white p-1.5 flex items-center justify-center shadow-lg shadow-emerald-500/10 shrink-0 border-2 border-emerald-500/40 ring-2 ring-emerald-500/20">
+        {/* Enhanced Brand Header with Logo Glow */}
+        <div className="px-3 py-5 mb-4 border-b border-white/10 flex items-center gap-3">
+          <div className="w-12 h-12 rounded-2xl bg-white p-1.5 flex items-center justify-center shadow-lg shadow-emerald-500/20 shrink-0 border-2 border-emerald-500/40 ring-2 ring-emerald-500/20 animate-pulse-glow hover:animate-none transition-all hover:scale-105">
             <Image src={centralSagaLogo} alt="Central Saga" className="w-full h-full object-contain" />
           </div>
           <div>
-            <h1 className="text-base font-black tracking-tight text-white leading-tight">
+            <h1 className="text-sm font-black tracking-tight text-white leading-tight">
               Central Saga
             </h1>
-            <p className="text-[10px] font-extrabold text-emerald-400 tracking-wide uppercase">
+            <p className="text-[10px] font-extrabold text-emerald-400 tracking-widest uppercase">
               Enterprise Performance
             </p>
           </div>
         </div>
 
-        {/* Navigation Menu */}
+        {/* Navigation Menu - Modernized */}
         <nav className="space-y-1">
           {menuItems
             .filter((item) => {
               if (!item.roles) return true;
 
-              const extractRoleName = (r: any): string => {
-                if (!r) return "";
-                if (typeof r === "string") return r.toUpperCase();
-                if (typeof r === "object" && r.name) return String(r.name).toUpperCase();
-                return String(r).toUpperCase();
+              // FIX: Better role extraction with proper validation
+              const extractRoleName = (r: unknown): string => {
+                if (r === null || r === undefined) return "";
+                if (typeof r === "string") {
+                  const trimmed = r.trim().toUpperCase();
+                  return trimmed ? trimmed : "";
+                }
+                if (typeof r === "object" && "name" in r && typeof r.name === "string") {
+                  const trimmed = r.name.trim().toUpperCase();
+                  return trimmed ? trimmed : "";
+                }
+                const str = String(r);
+                return str.trim().toUpperCase() || "";
               };
 
               const getRawRoles = () => {
-                if (Array.isArray(user?.roles) && user.roles.length > 0) return user.roles;
-                if (user?.role) return [user.role];
-                return ["ADMIN", "MANAGER", "EMPLOYEE"];
+                if (Array.isArray(user?.roles) && user.roles.length > 0) return user.roles.filter(r => r && r.trim());
+                if (user?.role && user.role.trim()) return [user.role];
+                return ["ADMIN", "MANAGER", "EMPLOYEE"] as string[];
               };
 
-              const userRoles = getRawRoles().map(extractRoleName);
-              const hasRoleMatch = item.roles.some((r) => userRoles.includes(r.toUpperCase()));
+              const userRoles = getRawRoles().map(extractRoleName).filter(r => r !== "");
+              
+              // If no valid roles found, show all menu items (defensive)
+              if (userRoles.length === 0) return true;
+              
+              const hasRoleMatch = item.roles.some((r: any) => {
+                const roleName = typeof r === "string" ? r.toUpperCase() : String(r).toUpperCase();
+                return userRoles.includes(roleName);
+              });
 
               const userPerms = user?.permissions || [];
               const hasPermMatch = item.permission
@@ -139,22 +157,34 @@ export default function Sidebar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`flex items-center justify-between gap-3 px-3.5 py-2.5 rounded-xl text-xs font-semibold transition-all ${
+                  className={`group relative flex items-center justify-between gap-3 px-3.5 py-2.5 rounded-xl text-xs font-bold transition-all duration-300 ${
                     isActive
-                      ? "bg-blue-600 text-white shadow-md font-bold"
-                      : "text-slate-400 hover:bg-slate-800 hover:text-slate-200"
+                      ? "bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow-lg shadow-emerald-500/30 pl-4"
+                      : "text-slate-400 hover:bg-white/10 hover:text-slate-200 hover:translate-x-1"
                   }`}
                 >
-                  <div className="flex items-center gap-3">
-                    <Icon className={`w-4 h-4 ${isActive ? "text-white" : "text-slate-400"}`} />
-                    <span>{item.name}</span>
+                  {/* Active Left Accent Bar */}
+                  {isActive && (
+                    <span className="absolute left-0 w-1 h-full bg-emerald-400 rounded-r-lg" />
+                  )}
+                  
+                  <div className="flex items-center gap-3 relative z-10">
+                    <Icon 
+                      className={`w-4.5 h-4.5 transition-all duration-300 ${
+                        isActive ? "text-white drop-shadow-lg" : "text-slate-500 group-hover:text-emerald-400 group-hover:scale-110"
+                      }`} 
+                    />
+                    <span className={`tracking-wide transition-all duration-300 ${isActive ? "" : "group-hover:tracking-wide"}`}>
+                      {item.name}
+                    </span>
                   </div>
+                  
                   {isAuditLog && logCount > 0 && (
                     <span
-                      className={`px-2 py-0.5 text-[10px] font-black rounded-full shadow-2xs transition-all ${
+                      className={`relative z-10 px-2 py-0.5 text-[10px] font-black rounded-full shadow-lg transition-all ${
                         isActive
-                          ? "bg-white text-blue-700"
-                          : "bg-blue-600 text-white"
+                          ? "bg-white text-emerald-700"
+                          : "bg-gradient-to-r from-blue-600 to-cyan-600 text-white"
                       }`}
                     >
                       {logCount}
@@ -166,18 +196,26 @@ export default function Sidebar() {
         </nav>
       </div>
 
-      {/* User Footer & Logout */}
-      <div className="pt-4 border-t border-slate-800 space-y-3">
-        <div className="px-3 py-2 bg-slate-800/80 rounded-xl border border-slate-700/60 shadow-xs flex items-center gap-2 text-xs">
-          <div className="w-8 h-8 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-[10px] shadow-2xs overflow-hidden border border-blue-400/30 shrink-0">
+      {/* Glassmorphic User Footer */}
+      <div className="pt-4 border-t border-white/10">
+        {/* User Profile Card - Glass Effect */}
+        <div className="px-3 py-3 bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl shadow-sm flex items-center gap-3 mb-3">
+          {/* Avatar Container - Circular */}
+          <div className="relative w-10 h-10 rounded-full overflow-hidden ring-2 ring-emerald-500/30 shrink-0 shadow-md">
             {avatar ? (
               <img src={avatar} alt="Avatar" className="w-full h-full object-cover" />
             ) : (
-              user?.name?.slice(0, 2).toUpperCase() || "CS"
+              <div className="w-full h-full bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center font-bold text-xs text-white">
+                {user?.name?.slice(0, 2).toUpperCase() || "CS"}
+              </div>
             )}
+            {/* Status Dot - Online Indicator */}
+            <div className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-emerald-500 border-2 border-slate-900" />
           </div>
-          <div className="overflow-hidden flex-1">
-            <p className="font-bold text-slate-200 truncate text-[11px]">
+          
+          {/* User Info */}
+          <div className="overflow-hidden flex-1 min-w-0">
+            <p className="font-bold text-white truncate text-sm">
               {user?.name || "Admin System"}
             </p>
             <p className="text-[10px] text-slate-400 truncate">
@@ -186,12 +224,22 @@ export default function Sidebar() {
           </div>
         </div>
 
+        {/* Logout Button - Red Gradient */}
         <button
           onClick={() => authService.logout()}
-          className="flex items-center justify-center gap-2 w-full px-3 py-2 rounded-xl text-xs font-bold text-rose-300 bg-rose-500/10 hover:bg-rose-600 hover:text-white border border-rose-500/20 shadow-xs hover:shadow-sm transition-all cursor-pointer active:scale-98"
+          className="group relative flex items-center justify-center gap-2 w-full px-3 py-2.5 rounded-xl text-xs font-bold text-white shadow-lg transition-all cursor-pointer active:scale-95 overflow-hidden"
         >
-          <LogOut className="w-4 h-4 shrink-0" />
-          <span>Keluar (Logout)</span>
+          {/* Shimmer Effect */}
+          <span className="absolute inset-0 animate-shimmer pointer-events-none opacity-30" />
+          
+          {/* Background Gradient */}
+          <span className="absolute inset-0 bg-gradient-to-r from-rose-600 via-orange-600 to-rose-600" />
+          
+          {/* Content */}
+          <span className="relative z-10 flex items-center gap-2">
+            <LogOut className="w-4 h-4 transition-transform group-hover:rotate-90" />
+            <span>Keluar (Logout)</span>
+          </span>
         </button>
       </div>
     </aside>

@@ -110,16 +110,23 @@ class MlClusteringController extends Controller
         $period = $request->input('period', now()->format('Y-m'));
         $nClusters = (int) $request->input('n_clusters', 3);
         
-        // Validate prerequisites
+        // Check if feature data exists, auto-extract if empty
         $featuresCount = \DB::table('ml_employee_feature_data')
             ->where('evaluation_period', $period)
             ->count();
         
         if ($featuresCount === 0) {
+            Log::info("Features not found for period {$period}, auto-extracting now...");
+            $this->featureService->calculateForAllEmployees($period);
+            $featuresCount = \DB::table('ml_employee_feature_data')
+                ->where('evaluation_period', $period)
+                ->count();
+        }
+
+        if ($featuresCount === 0) {
             return response()->json([
                 'success' => false,
-                'message' => "No feature data found for period {$period}. Please extract features first.",
-                'hint' => "Call POST /api/v1/ml/extract-features with period: {$period}",
+                'message' => "Tidak ada data karyawan yang dapat diekstrak fiturnya untuk periode {$period}.",
             ], 400);
         }
         
@@ -195,35 +202,64 @@ class MlClusteringController extends Controller
     {
         $startTime = microtime(true);
         
-        $result = MLClusteringResult::where('evaluation_period', $period)
-            ->with('clusters.employee')
-            ->orderBy('created_at', 'desc')
-            ->first();
+        if ($period === 'latest' || $period === 'current') {
+            $result = MLClusteringResult::with('clusters.employee')
+                ->orderBy('processed_at', 'desc')
+                ->first();
+            if ($result) {
+                $period = $result->evaluation_period;
+            }
+        } else {
+            $result = MLClusteringResult::where('evaluation_period', $period)
+                ->with('clusters.employee')
+                ->orderBy('processed_at', 'desc')
+                ->first();
+        }
 
+        // If not found, attempt auto-extract features and run clustering
         if (!$result) {
-            Log::warning('No clustering results found', ['period' => $period]);
-            
-            // Check if features were extracted but no clustering done
             $featuresExists = \DB::table('ml_employee_feature_data')
                 ->where('evaluation_period', $period)
                 ->exists();
             
-            if ($featuresExists) {
-                return response()->json([
-                    'success' => false,
-                    'message' => 'Features extracted but clustering not run yet',
-                    'hint' => "Call POST /api/v1/ml/run-clustering with period: {$period}",
-                    'features_exist' => true,
-                ], 404);
+            if (!$featuresExists) {
+                try {
+                    $this->featureService->calculateForAllEmployees($period);
+                    $featuresExists = \DB::table('ml_employee_feature_data')
+                        ->where('evaluation_period', $period)
+                        ->exists();
+                } catch (\Exception $e) {
+                    Log::warning('Feature auto-extraction error: ' . $e->getMessage());
+                }
             }
-            
+
+            if ($featuresExists) {
+                try {
+                    $this->processingService->runKMeans($period, 3);
+                    $result = MLClusteringResult::where('evaluation_period', $period)
+                        ->with('clusters.employee')
+                        ->orderBy('processed_at', 'desc')
+                        ->first();
+                } catch (\Exception $e) {
+                    Log::warning('Auto clustering in getClusters failed: ' . $e->getMessage());
+                }
+            }
+        }
+
+        // Fallback to latest available clustering result
+        if (!$result) {
+            $result = MLClusteringResult::with('clusters.employee')
+                ->orderBy('processed_at', 'desc')
+                ->first();
+            if ($result) {
+                $period = $result->evaluation_period;
+            }
+        }
+
+        if (!$result) {
             return response()->json([
                 'success' => false,
-                'message' => "No data found for period {$period}",
-                'hints' => [
-                    "Extract features: POST /api/v1/ml/extract-features",
-                    "Then run clustering: POST /api/v1/ml/run-clustering",
-                ],
+                'message' => "Belum ada data clustering yang tersedia di sistem.",
             ], 404);
         }
 
@@ -237,7 +273,7 @@ class MlClusteringController extends Controller
             
             $clusterGroups[$clusterId][] = [
                 'employee_id' => $clusterMember->employee->id,
-                'name' => $clusterMember->employee->name,
+                'name' => $clusterMember->employee->full_name ?? $clusterMember->employee->name ?? 'N/A',
                 'position' => $clusterMember->employee->position,
                 'division' => $clusterMember->employee->division->name ?? 'N/A',
                 'distance_to_centroid' => (float) $clusterMember->distance_to_centroid,
@@ -260,11 +296,13 @@ class MlClusteringController extends Controller
             'data' => [
                 'period' => $result->evaluation_period,
                 'n_clusters' => $result->n_clusters,
-                'silhouette_score' => $result->silhouette_score,
+                'silhouette_score' => (float) $result->silhouette_score,
                 'centroids' => $result->centroids,
                 'interpretations' => $interpretations,
                 'clusters' => $clusterGroups,
-                'quality_rating' => $this->interpretQuality($result->silhouette_score),
+                'cluster_distribution' => array_map('count', $clusterGroups),
+                'quality_interpretation' => $this->interpretQuality((float) $result->silhouette_score),
+                'quality_rating' => $this->interpretQuality((float) $result->silhouette_score),
             ],
             'metadata' => [
                 'fetched_at' => now()->toISOString(),
@@ -302,18 +340,19 @@ class MlClusteringController extends Controller
             $avgScore = 0;
             
             if (!empty($centroid)) {
-                // Average of first 5 positive features
+                // Average of first 5 positive features (attendance, task completed, on time, quality, discipline)
                 $positiveFeatures = min(5, count($centroid));
                 $sum = array_sum(array_slice($centroid, 0, $positiveFeatures));
-                $avgScore = ($sum / $positiveFeatures) * 100;
+                $rawAvg = $sum / $positiveFeatures;
+                $avgScore = $rawAvg > 1.0 ? $rawAvg : ($rawAvg * 100);
             }
             
-            if ($avgScore >= 70) {
-                $interpretations[$clusterId] = "High Performance Cluster (Top Performers)";
-            } elseif ($avgScore >= 40) {
-                $interpretations[$clusterId] = "Medium Performance Cluster (Average Contributors)";
+            if ($avgScore >= 80) {
+                $interpretations[$clusterId] = "Kinerja Tinggi & Beban Terkendali (Kandidat Utama)";
+            } elseif ($avgScore >= 65) {
+                $interpretations[$clusterId] = "Kinerja Baik & Beban Tinggi (Perlu Evaluasi Beban)";
             } else {
-                $interpretations[$clusterId] = "Low Performance Cluster (Needs Improvement)";
+                $interpretations[$clusterId] = "Kinerja Perlu Ditingkatkan (Butuh Pendampingan)";
             }
         }
         

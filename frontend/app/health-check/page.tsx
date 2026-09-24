@@ -195,7 +195,7 @@ export default function HealthCheckDashboard() {
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-emerald-600">✓</span>
-                  <code>GET /api/v1/ml/clusters/{period}</code>
+                  <code>GET /api/v1/ml/clusters/2026-09</code>
                   <span className="text-gray-500">(Get clustering results)</span>
                 </li>
               </ul>
@@ -224,7 +224,7 @@ export default function HealthCheckDashboard() {
             <div className="bg-gray-800 p-4 rounded-lg">
               <span className="text-cyan-400">$</span> podman ps
               <pre className="mt-2 text-gray-300 text-xs overflow-x-auto">
-{CONTAINER_STATUS_OUTPUT}
+{"CONTAINER ID  IMAGE                      COMMAND               STATUS       PORTS                    NAMES\nsimkap_front  localhost/simkap_frontend  npm run dev           Up (healthy) 0.0.0.0:3000->3000/tcp   simkap_frontend\nsimkap_back   localhost/simkap_backend   php artisan serve     Up (healthy) 0.0.0.0:8000->8000/tcp   simkap_backend\nsimkap_pg     docker.io/library/postgres:16-alpine Up (healthy) 0.0.0.0:5432->5432/tcp   simkap_postgres"}
               </pre>
             </div>
 

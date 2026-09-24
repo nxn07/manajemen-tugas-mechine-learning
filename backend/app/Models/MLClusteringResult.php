@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class MLClusteringResult extends Model
 {
     protected $table = 'ml_clustering_results';
+    public $timestamps = false;
 
     protected $fillable = [
         'evaluation_period',
@@ -19,6 +20,7 @@ class MLClusteringResult extends Model
     ];
 
     protected $casts = [
+        'silhouette_score' => 'float',
         'centroids' => 'array',
         'feature_names' => 'array',
         'processed_at' => 'datetime',
@@ -29,6 +31,6 @@ class MLClusteringResult extends Model
      */
     public function clusters(): HasMany
     {
-        return $this->hasMany(MLEmployeeCluster::class);
+        return $this->hasMany(MLEmployeeCluster::class, 'clustering_result_id');
     }
 }

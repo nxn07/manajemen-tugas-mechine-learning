@@ -408,6 +408,13 @@ export function useTasks() {
     taskService.review(taskId, status, notes).catch(() => {});
   };
 
+  const clearDraftTasks = () => {
+    if (typeof window !== "undefined") {
+      localStorage.removeItem(LOCAL_TASKS_KEY);
+    }
+    fetchTasks();
+  };
+
   return {
     tasks,
     loading,
@@ -418,6 +425,7 @@ export function useTasks() {
     deleteTask,
     restoreTask,
     permanentDeleteTask,
+    clearDraftTasks,
     submitTask,
     reviewTask,
   };

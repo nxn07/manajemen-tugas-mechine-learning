@@ -32,11 +32,17 @@ apiClient.interceptors.response.use(
       token.startsWith('token_') ||
       token.startsWith('mock_');
 
-    if (error.response?.status === 401 && !isDemo) {
+    if (error.response?.status === 401) {
       Cookies.remove('simkap_token', { path: '/' });
       Cookies.remove('simkap_user', { path: '/' });
-      if (typeof window !== 'undefined' && !window.location.pathname.includes('/login')) {
-        window.location.href = '/login';
+      if (typeof window !== 'undefined') {
+        localStorage.removeItem('token');
+        localStorage.removeItem('access_token');
+        localStorage.removeItem('simkap_token');
+        localStorage.removeItem('simkap_user');
+        if (!window.location.pathname.includes('/login')) {
+          window.location.href = '/login?expired=1';
+        }
       }
     }
     return Promise.reject(error);
