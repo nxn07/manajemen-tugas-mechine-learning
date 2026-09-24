@@ -91,8 +91,12 @@ class MLProcessingService
             throw new \Exception("Python ML processor script not found at: {$pythonScript}");
         }
 
-        // Detect python binary
-        $pythonBin = trim(shell_exec('which python3 2>/dev/null') ?: (shell_exec('which python 2>/dev/null') ?: 'python3'));
+        // Detect python binary (Windows vs Linux)
+        if (PHP_OS_FAMILY === 'Windows') {
+            $pythonBin = 'python';
+        } else {
+            $pythonBin = trim(shell_exec('which python3 2>/dev/null') ?: (shell_exec('which python 2>/dev/null') ?: 'python3'));
+        }
 
         $process = Process::timeout(120)->run([
             $pythonBin,
