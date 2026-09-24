@@ -50,6 +50,12 @@ export const authService = {
 
       Cookies.set('simkap_token', token, { expires: 7, secure: process.env.NODE_ENV === 'production', path: '/' });
       Cookies.set('simkap_user', JSON.stringify(user), { expires: 7, path: '/' });
+      if (typeof window !== "undefined") {
+        localStorage.setItem("token", token);
+        localStorage.setItem("access_token", token);
+        localStorage.setItem("simkap_token", token);
+        localStorage.setItem("simkap_user", JSON.stringify(user));
+      }
       
       return { token, user };
     } catch (err: any) {
@@ -176,6 +182,9 @@ export const authService = {
       Cookies.remove('simkap_user', { path: '/' });
       if (typeof window !== "undefined") {
         localStorage.removeItem('simkap_user');
+        localStorage.removeItem('token');
+        localStorage.removeItem('access_token');
+        localStorage.removeItem('simkap_token');
       }
       window.location.href = '/login';
     }
@@ -205,7 +214,18 @@ export const authService = {
           const savedPerms = cleanEmail ? localStorage.getItem(`simkap_user_perm_${cleanEmail}`) : null;
           const savedRole = cleanEmail ? localStorage.getItem(`simkap_user_role_${cleanEmail}`) : null;
 
-          const currentRole = savedRole || parsed.role || parsed.roles?.[0] || "EMPLOYEE";
+          // FIX: Handle empty strings and undefined properly
+          let currentRole: string;
+          if (savedRole && savedRole.trim() !== "") {
+            currentRole = savedRole;
+          } else if (parsed.role && parsed.role.trim() !== "") {
+            currentRole = parsed.role;
+          } else if (parsed.roles && Array.isArray(parsed.roles) && parsed.roles.length > 0 && parsed.roles[0].trim() !== "") {
+            currentRole = parsed.roles[0];
+          } else {
+            currentRole = "EMPLOYEE"; // Default fallback
+          }
+
           let permissions = parsed.permissions || ["tasks.submit"];
           if (savedPerms) {
             try {
@@ -234,7 +254,18 @@ export const authService = {
       const savedPerms = cleanEmail ? localStorage.getItem(`simkap_user_perm_${cleanEmail}`) : null;
       const savedRole = cleanEmail ? localStorage.getItem(`simkap_user_role_${cleanEmail}`) : null;
 
-      const currentRole = savedRole || parsed.role || parsed.roles?.[0] || "EMPLOYEE";
+      // FIX: Handle empty strings and undefined properly
+      let currentRole: string;
+      if (savedRole && savedRole.trim() !== "") {
+        currentRole = savedRole;
+      } else if (parsed.role && parsed.role.trim() !== "") {
+        currentRole = parsed.role;
+      } else if (parsed.roles && Array.isArray(parsed.roles) && parsed.roles.length > 0 && parsed.roles[0].trim() !== "") {
+        currentRole = parsed.roles[0];
+      } else {
+        currentRole = "EMPLOYEE"; // Default fallback
+      }
+
       let permissions = parsed.permissions || ["tasks.submit"];
       if (savedPerms) {
         try {

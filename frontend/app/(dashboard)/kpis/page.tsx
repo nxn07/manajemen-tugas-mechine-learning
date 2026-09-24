@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Footer from "@/components/shared/Footer";
 import { useAuth } from "@/hooks/useAuth";
 import { auditLogService } from "@/services/audit-log-service";
 import { Toast } from "@/components/ui/Toast";

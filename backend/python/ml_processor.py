@@ -29,12 +29,20 @@ def load_data(data_path: str) -> tuple:
         with open(data_path, 'r') as f:
             data = json.load(f)
         
-        matrix = np.array([row['features'] for row in data['employees']])
-        labels = [row['label'] for row in data['employees']]
+        if 'employees' in data:
+            matrix = np.array([row['features'] for row in data['employees']], dtype=float)
+            labels = [row['label'] for row in data['employees']]
+            feature_names = data.get('feature_names', data.get('features', []))
+        elif 'matrix' in data and 'labels' in data:
+            matrix = np.array(data['matrix'], dtype=float)
+            labels = data['labels']
+            feature_names = data.get('features', data.get('feature_names', []))
+        else:
+            raise ValueError("Invalid format: expected 'employees' or 'matrix'/'labels' in JSON data")
         
         print_step(f"✅ Loaded {len(labels)} employees with {matrix.shape[1]} features")
         
-        return matrix, labels, data['feature_names']
+        return matrix, labels, feature_names
         
     except Exception as e:
         raise ValueError(f"Failed to load data: {str(e)}")
@@ -274,7 +282,7 @@ def main():
         
         # Step 6: Interpret clusters
         print("\n--- Phase 6: Cluster Interpretation ---")
-        centroids = kmeans.cluster_centers_.tolist()
+        centroids = scaler.inverse_transform(kmeans.cluster_centers_).tolist()
         interpretations = interpret_clusters(centroids)
         
         # Prepare output

@@ -18,11 +18,13 @@ return Application::configure(basePath: dirname(__DIR__))
             'role_or_permission' => \Spatie\Permission\Middleware\RoleOrPermissionMiddleware::class,
         ]);
         
-        // Add CORS middleware to web group
+        // Add timing middleware to web group
         $middleware->web(append: [
-            \App\Http\Middleware\CORSMiddleware::class,
             \App\Http\Middleware\RequestTiming::class,
         ]);
+
+        // For API-first architecture, guests receive 401 instead of redirecting to undefined 'login' route
+        $middleware->redirectGuestsTo(fn () => null);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
