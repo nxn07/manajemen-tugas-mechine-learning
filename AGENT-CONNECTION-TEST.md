@@ -1,0 +1,3 @@
+# Uji Koneksi GitHub — Hermes Agent
+
+File ini dibuat secara otomatis oleh **Hermes Agent** yang berjalan di VPS pada tanggal **6 Oktober 2026**. Tujuannya adalah untuk menguji koneksi antara lingkungan agen di VPS dengan repositori GitHub `nxn07/manajemen-tugas-mechine-learning`, khususnya kemampuan agen untuk membuat branch baru, menulis berkas, melakukan commit dengan pesan bergaya Conventional Commits, serta melakukan push ke `origin`. Dengan adanya berkas ini, keberhasilan alur kerja Git dari sisi agen dapat diverifikasi secara langsung melalui branch `agent/test-connection` di GitHub, sehingga dapat dipastikan bahwa kredensial, akses jaringan, dan konfigurasi remote pada VPS berfungsi dengan benar sebelum agen digunakan untuk perubahan kode yang sesungguhnya.
